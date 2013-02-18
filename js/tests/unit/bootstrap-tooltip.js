@@ -2,12 +2,6 @@ $(function () {
 
     module("bootstrap-tooltip")
 
-      test("should provide no conflict", function () {
-        var tooltip = $.fn.tooltip.noConflict()
-        ok(!$.fn.tooltip, 'tooltip was set back to undefined (org value)')
-        $.fn.tooltip = tooltip
-      })
-
       test("should be defined on jquery object", function () {
         var div = $("<div></div>")
         ok(div.tooltip, 'popover method is defined')
@@ -43,11 +37,10 @@ $(function () {
         tooltip.tooltip('hide')
       })
 
-      test("should allow html entities", function () {
+      test("should always allow html entities", function () {
         $.support.transition = false
         var tooltip = $('<a href="#" rel="tooltip" title="<b>@fat</b>"></a>')
           .appendTo('#qunit-fixture')
-          .tooltip({html: true})
           .tooltip('show')
 
         ok($('.tooltip b').length, 'b tag was inserted')
@@ -120,7 +113,7 @@ $(function () {
         }, 50)
       })
 
-      test("should show tooltip if leave event hasn't occured before delay expires", function () {
+      test("should show tooltip if leave event hasn't occurred before delay expires", function () {
         var tooltip = $('<a href="#" rel="tooltip" title="Another tooltip"></a>')
           .appendTo('#qunit-fixture')
           .tooltip({ delay: 150 })
@@ -138,22 +131,14 @@ $(function () {
       test("should destroy tooltip", function () {
         var tooltip = $('<div/>').tooltip().on('click.foo', function(){})
         ok(tooltip.data('tooltip'), 'tooltip has data')
-        ok($._data(tooltip[0], 'events').mouseover && $._data(tooltip[0], 'events').mouseout, 'tooltip has hover event')
-        ok($._data(tooltip[0], 'events').click[0].namespace == 'foo', 'tooltip has extra click.foo event')
+        ok(tooltip.data('events').mouseover && tooltip.data('events').mouseout, 'tooltip has hover event')
+        ok(tooltip.data('events').click[0].namespace == 'foo', 'tooltip has extra click.foo event')
         tooltip.tooltip('show')
         tooltip.tooltip('destroy')
         ok(!tooltip.hasClass('in'), 'tooltip is hidden')
-        ok(!$._data(tooltip[0], 'tooltip'), 'tooltip does not have data')
-        ok($._data(tooltip[0], 'events').click[0].namespace == 'foo', 'tooltip still has click.foo')
-        ok(!$._data(tooltip[0], 'events').mouseover && !$._data(tooltip[0], 'events').mouseout, 'tooltip does not have any events')
+        ok(!tooltip.data('tooltip'), 'tooltip does not have data')
+        ok(tooltip.data('events').click[0].namespace == 'foo', 'tooltip still has click.foo')
+        ok(!tooltip.data('events').mouseover && !tooltip.data('events').mouseout, 'tooltip does not have any events')
       })
 
-      test("should show tooltip with delegate selector on click", function () {
-        var div = $('<div><a href="#" rel="tooltip" title="Another tooltip"></a></div>')
-        var tooltip = div.appendTo('#qunit-fixture')
-                         .tooltip({ selector: 'a[rel=tooltip]',
-                                    trigger: 'click' })
-        div.find('a').trigger('click')
-        ok($(".tooltip").is('.fade.in'), 'tooltip is faded in')
-      })
 })
