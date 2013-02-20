@@ -13,12 +13,12 @@
     "Back to top": "Voltar ao topo",
     "Get started": "Ponto de partida",
     "Read the blog": "Leia o blog",
-    "Submit issues": "Relatar issues",
+    "Submit issues": "Relatar bugs",
     "Roadmap and changelog": "Roadmap e changelog",
     "Designed and built with all the love in the world <a href=\"http://twitter.com/twitter\" target=\"_blank\">@twitter</a> by <a href=\"http://twitter.com/mdo\" target=\"_blank\">@mdo</a> and <a href=\"http://twitter.com/fat\" target=\"_blank\">@fat</a>.": "Desenvolvido com todo amor no mundo <a href=\"http://twitter.com/twitter\" target=\"_blank\">@twitter</a> por <a href=\"http://twitter.com/mdo\" target=\"_blank\">@mdo</a> e <a href=\"http://twitter.com/fat\" target=\"_blank\">@fat</a>.",
     "Code licensed under the <a href=\"http://www.apache.org/licenses/LICENSE-2.0\" target=\"_blank\">Apache License v2.0</a>. Documentation licensed under <a href=\"http://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a>.": "Código licenciado sob <a href=\"http://www.apache.org/licenses/LICENSE-2.0\" target=\"_blank\">Licença Apache v2.0</a>. A documentação é licenciada sob <a href=\"http://creativecommons.org/licenses/by/3.0/\">CC 3.0</a>.",
     "Icons from <a href=\"http://glyphicons.com\">Glyphicons Free</a>, licensed under <a href=\"http://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a>.": "Ícones do <a href=\"http://glyphicons.com\">Glyphicons Free</a>, licenciado sob <a href=\"http://creativecommons.org/licenses/by/3.0/\">CC 3.0</a>.",
-    "This is a twitter Bootstrap version from Joox Cards kept by <a href=\"http://anderssauro.com\">Andersson Quegi</a>": "Este projeto é uma versão do Twitter Bootstrap da Joox Cards mantido por <a href=\"http://anderssauro.com\">Andersson Quegi</a>",
+    "This is a twitter Bootstrap version from Joox Cards kept by <a href=\"http://anderssauro.com\">Andersson Quegi</a>.": "Este projeto é uma versão do Twitter Bootstrap da Joox Cards mantido por <a href=\"http://anderssauro.com\">Andersson Quegi</a>.",
      "What's new": "Novos plugins",
     "Inner Border at Thumbnails section": "Borda interna na seção Thumbnails"
   },
@@ -866,10 +866,10 @@
     "Desktop": "Desktop",
     "Here, green checkmarks indicate that class is hidden in your current viewport.": "Aqui, marcas verdes indica que a classe é escondido na nossa resolução atual",
     "This is a unofficial version of Twitter Bootstrap translated to portugueses kept by <a href=\"http://blog.alexandremagno.net/\" title=\"Alexandre Magno personal Blog\">Alexandre Magno</a>": "Esta é uma versão não oficial do Boostrap do Twitter traduzida para o português e mantido por <a href=\"http://blog.alexandremagno.net/\" title=\"Blog pessoal do Alexandre Magno\">Alexandre Magno</a>",
-    "Globo.com sites using Bootstrap.": "Sites da Globo.com usando o Bootstrap",
+    //"Globo.com sites using Bootstrap.": "Sites da Globo.com usando o Bootstrap",
     "See github project": "Ver projeto no Github",
     "This is a bootstrap used at <a href=\"http://www.joox.com.br/\" title=\"Joox Cards\">Joox Cards</a>": "Este é o Bootstrap usado na <a href=\"http://www.joox.com.br/\" title=\"Joox Cards\">Joox Cards</a>",
-    //"Projects using Globo Bootstrap": "Projetos usando o Bootsrap",
+    "Projects using Joox Bootstrap": "Projetos usando o Joox Bootsrap",
 
 
     "Fundamental HTML elements styled and enhanced with extensible classes.": "Elementos HTML fundamentais estilizado e aprimorados com classes extensivas",
