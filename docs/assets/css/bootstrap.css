@@ -581,7 +581,7 @@ a:hover {
 }
 
 @font-face {
-  font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'bariol_regular';
   font-style: normal;
   font-weight: normal;
   src: url(../font/bariol_regular-webfont.eot);
@@ -589,7 +589,7 @@ a:hover {
 }
 
 @font-face {
-  font-family: "bariol_bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'bariol_bold';
   font-style: normal;
   font-weight: normal;
   src: url(../font/bariol_bold-webfont.eot);
@@ -597,7 +597,7 @@ a:hover {
 }
 
 @font-face {
-  font-family: "bariol_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'bariol_light';
   font-style: normal;
   font-weight: normal;
   src: url(../font/bariol_light-webfont.eot);
@@ -605,7 +605,7 @@ a:hover {
 }
 
 @font-face {
-  font-family: "bariol_thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'bariol_thin';
   font-style: normal;
   font-weight: normal;
   src: url(../font/bariol_thin-webfont.eot);
@@ -650,7 +650,7 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: "bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1;
   color: #333333;
