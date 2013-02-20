@@ -9,7 +9,7 @@
  */
 
 .clearfix {
-  *zoom: 1;
+  *zoom: 2;
 }
 
 .clearfix:before,
@@ -94,7 +94,7 @@
 @media (min-width: 1200px) {
   .row {
     margin-left: -30px;
-    *zoom: 1;
+    *zoom: 2;
   }
   .row:before,
   .row:after {
@@ -190,7 +190,7 @@
   }
   .row-fluid {
     width: 100%;
-    *zoom: 1;
+    *zoom: 2;
   }
   .row-fluid:before,
   .row-fluid:after {
@@ -441,7 +441,7 @@
 @media (min-width: 768px) and (max-width: 979px) {
   .row {
     margin-left: -20px;
-    *zoom: 1;
+    *zoom: 2;
   }
   .row:before,
   .row:after {
@@ -537,7 +537,7 @@
   }
   .row-fluid {
     width: 100%;
-    *zoom: 1;
+    *zoom: 2;
   }
   .row-fluid:before,
   .row-fluid:after {
