@@ -581,35 +581,35 @@ a:hover {
 }
 
 @font-face {
-  font-family: "bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  src: url('./font/bariol_regular-webfont.eot');
-  src: url('./font/bariol_regular-webfont.eot?#iefix') format('embedded-opentype'), url('./font/bariol_regular-webfont.woff') format('woff'), url('./font/bariol_regular-webfont.ttf') format('truetype'), url('./font/bariol_regular-webfont.svg#bariol_regular') format('svg');
+  src: url(../font/bariol_regular-webfont.eot);
+  src: local('bariol_regular'), url(../font/bariol_regular-webfont.eot?#iefix) format('embedded-opentype'), url(../font/bariol_regular-webfont.woff) format('woff'), url(../font/bariol_regular-webfont.ttf) format('truetype'), url(../font/bariol_regular-webfont.svg#bariol_regular) format('svg'), url(../font/bariol_regular-webfont.otf) format('opentype');
 }
 
 @font-face {
   font-family: "bariol_bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  src: url('./font/bariol_bold-webfont.eot');
-  src: url('./font/bariol_bold-webfont.eot?#iefix') format('embedded-opentype'), url('./font/bariol_bold-webfont.woff') format('woff'), url('./font/bariol_bold-webfont.ttf') format('truetype'), url('./font/bariol_bold-webfont.svg#bariol_bold') format('svg');
+  src: url(../font/bariol_bold-webfont.eot);
+  src: local('bariol_bold'), url(../font/bariol_bold-webfont.eot?#iefix) format('embedded-opentype'), url(../font/bariol_bold-webfont.woff) format('woff'), url(../font/bariol_bold-webfont.ttf) format('truetype'), url(../font/bariol_bold-webfont.svg#bariol_bold) format('svg'), url(../font/bariol_bold-webfont.otf) format('opentype');
 }
 
 @font-face {
   font-family: "bariol_light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  src: url('./font/bariol_light-webfont.eot');
-  src: url('./font/bariol_light-webfont.eot?#iefix') format('embedded-opentype'), url('./font/bariol_light-webfont.woff') format('woff'), url('./font/bariol_light-webfont.ttf') format('truetype'), url('./font/bariol_light-webfont.svg#bariol_light') format('svg');
+  src: url(../font/bariol_light-webfont.eot);
+  src: local('bariol_light'), url(../font/bariol_light-webfont.eot?#iefix) format('embedded-opentype'), url(../font/bariol_light-webfont.woff) format('woff'), url(../font/bariol_light-webfont.ttf) format('truetype'), url(../font/bariol_light-webfont.svg#bariol_light) format('svg'), url(../font/bariol_light-webfont.otf) format('opentype');
 }
 
 @font-face {
   font-family: "bariol_thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
-  src: url('./font/bariol_thin-webfont.eot');
-  src: url('./font/bariol_thin-webfont.eot?#iefix') format('embedded-opentype'), url('./font/bariol_thin-webfont.woff') format('woff'), url('./font/bariol_thin-webfont.ttf') format('truetype'), url('./font/bariol_thin-webfont.svg#bariol_thin') format('svg');
+  src: url(../font/bariol_thin-webfont.eot);
+  src: local('bariol_thin'), url(../font/bariol_thin-webfont.eot?#iefix) format('embedded-opentype'), url(../font/bariol_thin-webfont.woff) format('woff'), url(../font/bariol_thin-webfont.ttf) format('truetype'), url(../font/bariol_thin-webfont.svg#bariol_thin) format('svg'), url(../font/bariol_thin-webfont.otf) format('opentype');
 }
 
 p {
@@ -653,7 +653,7 @@ h6 {
   font-family: "bariol", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1;
-  color: inherit;
+  color: #333333;
   text-rendering: optimizelegibility;
 }
 
