@@ -32,11 +32,18 @@
         ================================================== -->
         <section id="typography">
           <div class="page-header">
-            <h1>{{_i}}Typography{{/i}}</h1>
+            <h2>{{_i}}Typography{{/i}}</h2>
           </div>
+          
+          {{! Using LESS }}
+          <h2>{{_i}}Built with Less{{/i}}</h2>
+          <p>{{_i}}The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.{{/i}}</p>
+
+
+          <hr class="bs-docs-separator">
 
           {{! Headings }}
-          <h2 id="headings">{{_i}}Headings{{/i}}</h2>
+          <h3 id="headings">{{_i}}Headings{{/i}}</h3>
           <p>{{_i}}All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.{{/i}}</p>
           <div class="bs-docs-example">
             <h1>h1. {{_i}}Heading 1{{/i}}</h1>
@@ -48,7 +55,7 @@
           </div>
 
           {{! Body copy }}
-          <h2 id="body-copy">{{_i}}Body copy{{/i}}</h2>
+          <h3 id="body-copy">{{_i}}Body copy{{/i}}</h3>
           <p>{{_i}}Bootstrap's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).{{/i}}</p>
           <div class="bs-docs-example">
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -58,23 +65,20 @@
           <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
 
           {{! Body copy .lead }}
-          <h3>{{_i}}Lead body copy{{/i}}</h3>
+          <h4>{{_i}}Lead body copy{{/i}}</h4>
           <p>{{_i}}Make a paragraph stand out by adding <code>.lead</code>.{{/i}}</p>
           <div class="bs-docs-example">
+          	<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          	{{!.lead }}
             <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
           </div>
           <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
-
-          {{! Using LESS }}
-          <h3>{{_i}}Built with Less{{/i}}</h3>
-          <p>{{_i}}The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.{{/i}}</p>
-
-
+          
           <hr class="bs-docs-separator">
 
-
           {{! Emphasis }}
-          <h2 id="emphasis">{{_i}}Emphasis{{/i}}</h2>
+          <h3 id="emphasis">{{_i}}Emphasis{{/i}}</h3>
           <p>{{_i}}Make use of HTML's default emphasis tags with lightweight styles.{{/i}}</p>
 
           <h3><code>&lt;small&gt;</code></h3>
@@ -109,7 +113,7 @@
 
 
           {{! Abbreviations }}
-          <h2 id="abbreviations">{{_i}}Abbreviations{{/i}}</h2>
+          <h3 id="abbreviations">{{_i}}Abbreviations{{/i}}</h3>
           <p>{{_i}}Stylized implemenation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.{{/i}}</p>
 
           <h3><code>&lt;abbr&gt;</code></h3>
@@ -131,7 +135,7 @@
 
 
           {{! Addresses }}
-          <h2 id="addresses">{{_i}}Addresses{{/i}}</h2>
+          <h3 id="addresses">{{_i}}Addresses{{/i}}</h3>
           <p>{{_i}}Present contact information for the nearest ancestor or the entire body of work.{{/i}}</p>
 
           <h3><code>&lt;address&gt;</code></h3>
@@ -167,10 +171,10 @@
 
 
           {{! Blockquotes }}
-          <h2 id="blockquotes">{{_i}}Blockquotes{{/i}}</h2>
+          <h3 id="blockquotes">{{_i}}Blockquotes{{/i}}</h3>
           <p>{{_i}}For quoting blocks of content from another source within your document.{{/i}}</p>
 
-          <h3>{{_i}}Default blockquote{{/i}}</h3>
+          <h4>{{_i}}Default blockquote{{/i}}</h4>
           <p>{{_i}}Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.{{/i}}</p>
           <div class="bs-docs-example">
             <blockquote>
@@ -183,7 +187,7 @@
 &lt;/blockquote&gt;
 </pre>
 
-          <h3>{{_i}}Blockquote options{{/i}}</h3>
+          <h4>{{_i}}Blockquote options{{/i}}</h4>
           <p>{{_i}}Style and content changes for simple variations on a standard blockquote.{{/i}}</p>
 
           <h4>{{_i}}Naming a source{{/i}}</h4>
@@ -349,10 +353,10 @@
         ================================================== -->
         <section id="code">
           <div class="page-header">
-            <h1>{{_i}}Code{{/i}}</h1>
+            <h2>{{_i}}Code{{/i}}</h2>
           </div>
 
-          <h2>Inline</h2>
+          <h3>Inline</h3>
           <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
 <div class="bs-docs-example">
   For example, <code>&lt;section&gt;</code> should be wrapped as inline.
@@ -361,7 +365,7 @@
 {{_i}}For example, &lt;code&gt;&lt;section&gt;&lt;/code&gt; should be wrapped as inline.{{/i}}
 </pre>
 
-          <h2>Basic block</h2>
+          <h3>Basic block</h3>
           <p>{{_i}}Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.{{/i}}</p>
 <div class="bs-docs-example">
   <pre>&lt;p&gt;{{_i}}Sample text here...{{/i}}&lt;/p&gt;</pre>
@@ -381,10 +385,10 @@
         ================================================== -->
         <section id="tables">
           <div class="page-header">
-            <h1>{{_i}}Tables{{/i}}</h1>
+            <h2>{{_i}}Tables{{/i}}</h2>
           </div>
 
-          <h2>{{_i}}Default styles{{/i}}</h2>
+          <h3>{{_i}}Default styles{{/i}}</h3>
           <p>{{_i}}For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.{{/i}}</p>
           <div class="bs-docs-example">
             <table class="table">
@@ -428,7 +432,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Optional classes{{/i}}</h2>
+          <h3>{{_i}}Optional classes{{/i}}</h3>
           <p>{{_i}}Add any of the follow classes to the <code>.table</code> base class.{{/i}}</p>
 
           <h3><code>{{_i}}.table-striped{{/i}}</code></h3>
@@ -597,7 +601,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Optional row classes{{/i}}</h2>
+          <h3>{{_i}}Optional row classes{{/i}}</h3>
           <p>{{_i}}Use contextual classes to color table rows.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -690,7 +694,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Supported table markup{{/i}}</h2>
+          <h3>{{_i}}Supported table markup{{/i}}</h3>
           <p>{{_i}}List of supported table HTML elements and how they should be used.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -789,13 +793,13 @@
         ================================================== -->
         <section id="forms">
           <div class="page-header">
-            <h1>{{_i}}Forms{{/i}}</h1>
+            <h2>{{_i}}Forms{{/i}}</h2>
           </div>
 
-          <h2>{{_i}}Default styles{{/i}}</h2>
+          <h3>{{_i}}Default styles{{/i}}</h3>
           <p>{{_i}}Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.{{/i}}</p>
           <form class="bs-docs-example">
-            <legend>Legend</legend>
+            <legend>{{_i}}Legend{{/i}}</legend>
             <label>{{_i}}Label name{{/i}}</label>
             <input type="text" placeholder="{{_i}}Type something…{{/i}}">
             <span class="help-block">{{_i}}Example block-level help text here.{{/i}}</span>
@@ -821,7 +825,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Optional layouts{{/i}}</h2>
+          <h3>{{_i}}Optional layouts{{/i}}</h3>
           <p>{{_i}}Included with Bootstrap are three optional form layouts for common use cases.{{/i}}</p>
 
           <h3>{{_i}}Search form{{/i}}</h3>
@@ -918,7 +922,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Supported form controls{{/i}}</h2>
+          <h3>{{_i}}Supported form controls{{/i}}</h3>
           <p>{{_i}}Examples of standard form controls supported in an example form layout.{{/i}}</p>
 
           <h3>{{_i}}Inputs{{/i}}</h3>
@@ -1040,7 +1044,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Extending form controls{{/i}}</h2>
+          <h3>{{_i}}Extending form controls{{/i}}</h3>
           <p>{{_i}}Adding on top of existing browser controls, Bootstrap includes other useful form components.{{/i}}</p>
 
           <h3>{{_i}}Prepended and appended inputs{{/i}}</h3>
@@ -1282,7 +1286,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Form control states{{/i}}</h2>
+          <h3>{{_i}}Form control states{{/i}}</h3>
           <p>{{_i}}Provide feedback to users or visitors with basic feedback states on form controls and labels.{{/i}}</p>
 
           <h3>{{_i}}Input focus{{/i}}</h3>
@@ -1368,10 +1372,10 @@
         ================================================== -->
         <section id="buttons">
           <div class="page-header">
-            <h1>{{_i}}Buttons{{/i}}</h1>
+            <h2>{{_i}}Buttons{{/i}}</h2>
           </div>
 
-          <h2>Default buttons</h2>
+          <h3>Default buttons</h3>
           <p>{{_i}}Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <thead>
@@ -1429,7 +1433,7 @@
           <p>{{_i}}IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.{{/i}}</p>
 
 
-          <h2>{{_i}}Button sizes{{/i}}</h2>
+          <h3>{{_i}}Button sizes{{/i}}</h3>
           <p>{{_i}}Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.{{/i}}</p>
           <div class="bs-docs-example">
             <p>
@@ -1480,7 +1484,7 @@
 </pre>
 
 
-          <h2>{{_i}}Disabled state{{/i}}</h2>
+          <h3>{{_i}}Disabled state{{/i}}</h3>
           <p>{{_i}}Make buttons look unclickable by fading them back 50%.{{/i}}</p>
 
           <h3>Anchor element</h3>
@@ -1510,7 +1514,7 @@
 </pre>
 
 
-          <h2>{{_i}}One class, multiple tags{{/i}}</h2>
+          <h3>{{_i}}One class, multiple tags{{/i}}</h3>
           <p>{{_i}}Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.{{/i}}</p>
           <form class="bs-docs-example">
             <a class="btn" href="">{{_i}}Link{{/i}}</a>
@@ -1534,7 +1538,7 @@
         ================================================== -->
         <section id="images">
           <div class="page-header">
-            <h1>{{_i}}Images{{/i}}</h1>
+            <h2>{{_i}}Images{{/i}}</h2>
           </div>
 
           <p>{{_i}}Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.{{/i}}</p>
@@ -1559,10 +1563,10 @@
         ================================================== -->
         <section id="icons">
           <div class="page-header">
-            <h1>{{_i}}Icons <small>by <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small>{{/i}}</h1>
+            <h2>{{_i}}Icons <small>by <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small>{{/i}}</h2>
           </div>
 
-          <h2>{{_i}}Icon glyphs{{/i}}</h2>
+          <h3>{{_i}}Icon glyphs{{/i}}</h3>
           <p>{{_i}}140 icons in sprite form, available in dark gray (default) and white, provided by <a href="http://glyphicons.com" target="_blank">Glyphicons</a>.{{/i}}</p>
           <ul class="the-icons clearfix">
             <li><i class="icon-glass"></i> icon-glass</li>
@@ -1718,7 +1722,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}How to use{{/i}}</h2>
+          <h3>{{_i}}How to use{{/i}}</h3>
           <p>{{_i}}All icons require an <code>&lt;i&gt;</code> tag with a unique class, prefixed with <code>icon-</code>. To use, place the following code just about anywhere:{{/i}}</p>
 <pre class="prettyprint linenums">
 &lt;i class="icon-search"&gt;&lt;/i&gt;
@@ -1736,7 +1740,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Icon examples{{/i}}</h2>
+          <h3>{{_i}}Icon examples{{/i}}</h3>
           <p>{{_i}}Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.{{/i}}</p>
 
           <h4>{{_i}}Buttons{{/i}}</h4>

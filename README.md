@@ -1,105 +1,160 @@
-<a href="http://getbootstrap.com">
-  <img src="http://twitter.github.com/bootstrap/assets/img/bootstrap-docs-readme.png" width="100px">
-</a>
+GLOBO BOOTSTRAP
+=================
 
-# [Bootstrap v2.3.0](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
+O Bootstrap da Globo, desenvolvido como uma extensão do Bootstrap do twitter, é um kit de ferramentas para facilmente usar componentes de interface para websites, aplicações e mais e para utilizar seus componentes nos diversos produtos da Globo.com. Inclui folha de estilos padronizadas para tipografia, formulários, botões, tabelas, grids, navegação alertas e mais.
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
+Para começar -- checkout https://github.com/globocom/bootstrap
 
-To get started, checkout [http://getbootstrap.com](http://getbootstrap.com)!
+O Bootstrap da Globo.com possui uma versão em português do Bootstrap do twitter que está localizada em
+	docs/build/languages/pt-br.json
+
+Com este arquivo é possível traduzir todos os textos do twitter original sem interferir na documentação original.
+
+Uso
+-----
+
+Você pode usar o Globo Bootstrap fazendo o download dos [componentes desejados na página de customização](http://globocom.github.com/bootstrap/customize.html).
+
+A página de download é servido pelo [Bootstrap Server](https://github.com/globocom/bootstrap-server).
+
+Como estender
+-------------
+
+Para estender o Globo Bootstrap, você precisa clonar o projeto
+
+	git clone https://github.com/globocom/bootstrap
+	
+As modificações de CSS devem ser feitas na pasta less.
+
+As modificações de Javascript devem ser feitas na pasta js.
+
+As modificações nos templates devem ser feitas na pasta docs/templates nos arquivos com extensão .mustache.
+
+Após qualquer modificação nos arquivos .less e .mustaque, existe um comando make para gerar os arquivos no formato css e formato html para os arquivos .less e os arquivos .html respectivamente
+
+Qual branch devo usar
+--------------
+
+O projeto mais atualizado sempre se encontra em uma branch globo-bootstrap-vn (onde n é o número da versão)
+
+A versão mais recente do twitter bootstrap se encontra em major.minor-wip e corresponde a versão globo-bootstrap-major.minor
+
+Como atualizar com o twitter bootstrap
+--------------------------------------
+
+O repositório remoto do twitter está em um origin chamado upstream em que é possivel obter novas versões.
+
+Para atualizar, basta fazer um merge da branch e rodar os comandos
+	
+	make
+	node docs/build/translation
+
+Após executar o último script, irá aparecer um modelo de json onde há as strings que surgiram para ser atualizadas na nova versão. Estas chaves e valores devem ser inseridas no arquivo
+	
+	docs/build/translation/pt-br.json
+
+Com isto basta executar o comando
+	
+	node docs/build/translation
+	
+Novamente até não restarem strings para serem traduzidas
+
+Como publicar o projeto
+--------------------------
+
+Para publicar os estáticos do projeto execute o comando
+	
+	make gh-pages-translated
+	
+Desta forma ele irá criar uma pasta num diretório anterior (../) chamada bootstrap-gh-pages.
 
 
+Como contribuir
+-----------------------
 
-## Quick start
-
-Three quick start options are available:
-
-* [Download the latest release](https://github.com/twitter/bootstrap/zipball/master).
-* Clone the repo: `git clone git://github.com/twitter/bootstrap.git`.
-* Install with Twitter's [Bower](http://twitter.github.com/bower): `bower install bootstrap`.
+Após realizar as modificações seguindo as diretrizes acima, faça um pull request para gente ;-)
 
 
+Versionamento
+--------------
 
-## Versioning
+Para transparência e no ciclo de release, e para manter compatibilidade, o Globo Bootstrap será mantido pelo Semantic Versioning.
 
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the following format:
+Os guidelines serão no seguinte formato:
 
 `<major>.<minor>.<patch>`
 
-And constructed with the following guidelines:
+Esta nomenclatura segue os seguintes princípios:
 
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
+* Quebra de compatibilidade com versão anterior aumenta o major
+* Adição de funcionalidade sem quebrar versionamento aumenta o minor
+* New additions without breaking backwards compatibility bumps the minor
+* Bug fixes aumenta o patch
 
-For more information on SemVer, please visit [http://semver.org/](http://semver.org/).
-
-
-
-## Bug tracker
-
-Have a bug or a feature request? [Please open a new issue](https://github.com/twitter/bootstrap/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines](https://github.com/necolas/issue-guidelines), written by [Nicolas Gallagher](https://github.com/necolas/).
+Para mais informações, visite http://semver.org/.
 
 
+Bug tracker
+-----------
 
-## Community
+Se encontrou algum bug, crie uma issue no github
 
-Keep track of development and community news.
-
-* Follow [@twbootstrap on Twitter](http://twitter.com/twbootstrap).
-* Read and subscribe to the [The Official Twitter Bootstrap Blog](http://blog.getbootstrap.com).
-* Have a question that's not a feature request or bug report? [Ask on the mailing list.](http://groups.google.com/group/twitter-bootstrap)
-* Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##twitter-bootstrap` channel.
+https://github.com/globocom/bootstrap/issues
 
 
+Roadmap
+---------------
 
-## Developers
+### globo-bootstrap-v1.1
+* Modificar tag do analytics
+* Listar as strings não usadas na tradução do arquivo pt-br.json
+* Remover entradas duplicadas de tradução
+* Componente de exemplo
+* Integração com o bootstrap-server para downloads customizados
 
-We have included a makefile with convenience methods for working with the Bootstrap library.
+Para desenvolvedores
+----------------------
 
-+ **dependencies**
-Our makefile depends on you having recess, connect, uglify.js, and jshint installed. To install, just run the following command in npm:
+Há um makefile para poder gerar os estáticos
 
-```
-$ npm install recess connect uglify-js jshint -g
-```
++ `make`
+Executa o compiler do less e gera o bootstrap.css e bootstrap.min.css e os templates
+O compilador lessc é necessário para o comando rodar.
 
-+ **build** - `make`
-Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://twitter.github.com/bootstrap/extend.html#compiling">Read more in our docs &raquo;</a>
++ `make test`
+Executa o jshint e testes do qunit com o [phantomjs](http://code.google.com/p/phantomjs/) (usado para o ci). Depende de ter o phantomjs instalado.
 
-+ **test** - `make test`
-Runs jshint and qunit tests headlessly in [phantomjs](http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
+Autores
+-------
 
-+ **watch** - `make watch`
-This is a convenience method for watching just Less files and automatically building them whenever you save. Requires the Watchr gem.
-
-
-
-## Contributing
-
-Please submit all pull requests against *-wip branches. If your pull request contains JavaScript patches or features, you must include relevant unit tests. All HTML and CSS should conform to the [Code Guide](http://github.com/mdo/code-guide), maintained by [Mark Otto](http://github.com/mdo).
-
-Thanks!
-
-
-
-## Authors
+## Twitter Bootstrap
 
 **Mark Otto**
 
-+ [http://twitter.com/mdo](http://twitter.com/mdo)
-+ [http://github.com/mdo](http://github.com/mdo)
++ http://twitter.com/mdo
++ http://github.com/markdotto
 
 **Jacob Thornton**
 
-+ [http://twitter.com/fat](http://twitter.com/fat)
-+ [http://github.com/fat](http://github.com/fat)
++ http://twitter.com/fat
++ http://github.com/fat
 
+## Globo Bootstrap
 
+**Alexandre Magno**
 
-## Copyright and license
++ http://blog.alexandremagno.net
++ github.com/alexanmtz
++ @alexanmtz
+
+**Guilherme Garnier**
+
++ http://blog.guilhermegarnier.com
++ github/ggarnier
++ @guilhermgarnier
+
+Copyright and license
+---------------------
 
 Copyright 2012 Twitter, Inc.
 
@@ -107,7 +162,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.
 You may obtain a copy of the License in the LICENSE file, or at:
 
-  [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+   http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

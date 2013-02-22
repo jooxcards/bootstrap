@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="./index.html">Globo Bootstrap</a>
+          <a class="brand" href="./index.html">Joox Bootstrap</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="">
@@ -109,10 +109,16 @@
         ================================================== -->
         <section id="typography">
           <div class="page-header">
-            <h1>Tipografia</h1>
+            <h2>Tipografia</h2>
           </div>
+          
+          <h2>Construído com o Less</h2>
+          <p>A escala tipográfica é baseado em duas variáveis LESS que estão disponíveis em <strong>variables.less</strong>: <code>@baseFontSize</code> e <code>@baseLineHeight</code>. O primeiro é o font-size base e o segundo é o line-height base. Nós usamos estas variáveis e uma simples matemática para criar as margens, paddings, e line-heights para toda nossa tipografia e mais. Customize-os e o Bootstrap se adapta.</p>
 
-          <h2 id="headings">Cabeçalhos</h2>
+
+          <hr class="bs-docs-separator">
+
+          <h3 id="headings">Cabeçalhos</h3>
           <p>Todos cabeçalhos, <code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code> estão disponíveis.</p>
           <div class="bs-docs-example">
             <h1>h1. Cabeçalho 1</h1>
@@ -123,7 +129,7 @@
             <h6>h6. Cabeçalho 6</h6>
           </div>
 
-          <h2 id="body-copy">cópia do corpo</h2>
+          <h3 id="body-copy">Estilo padrão de corpo do texto</h3>
           <p>O padrão global do <code>font-size</code> é <strong>14px</strong>, com um <code>line-height</code> de <strong>20px</strong>. Isto é aplicado ao <code>&lt;body&gt;</code> e todos os parágrafos. E ainda, <code>&lt;p&gt;</code> (parágrafos) recebem uma margem da metade do line-height (10px por padrão).</p>
           <div class="bs-docs-example">
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -132,21 +138,18 @@
           </div>
           <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
 
-          <h3>cópia principal do corpo</h3>
-          <p>Faça um parágrafo sobressair adicionando <code>.lead</code>.</p>
+          <h4>Parágrafo destacado</h4>
+          <p>Faça um parágrafo se destacar dos outros adicionando a classe <code>.lead</code> na tag <code>&lt;p&gt;</code>.</p>
           <div class="bs-docs-example">
+          	<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
             <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
           </div>
           <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
-
-          <h3>Construído com o Less</h3>
-          <p>A escala tipográfica é baseado em duas variáveis LESS que estão disponíveis em <strong>variables.less</strong>: <code>@baseFontSize</code> e <code>@baseLineHeight</code>. O primeiro é o font-size base e o segundo é o line-height base. Nós usamos estas variáveis e uma simples matemática para criar as margens, paddings, e line-heights para toda nossa tipografia e mais. Customize-os e o Bootstrap se adapta.</p>
-
-
+          
           <hr class="bs-docs-separator">
 
-
-          <h2 id="emphasis">Ênfase</h2>
+          <h3 id="emphasis">Ênfase</h3>
           <p>Faça o uso da ênfase padrão do HTML com estilos leves</p>
 
           <h3><code>&lt;small&gt;</code></h3>
@@ -180,7 +183,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2 id="abbreviations">Abreviações</h2>
+          <h3 id="abbreviations">Abreviações</h3>
           <p>Implementação estilizada do elemento <code>&lt;abbr&gt;</code> para abreviações e acrônimos para mostrar a versão expandida do hover. Abreviações com um atributo <code>title</code> tem uma leve borda inferior e ajuda o cursor no hover, dando informação adicional de contexto</p>
 
           <h3><code>&lt;abbr&gt;</code></h3>
@@ -201,7 +204,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2 id="addresses">Endereços</h2>
+          <h3 id="addresses">Endereços</h3>
           <p>Apresentar informação de contato para o ancestral mais próximo ou o corpo inteiro do documento</p>
 
           <h3><code>&lt;address&gt;</code></h3>
@@ -236,10 +239,10 @@
           <hr class="bs-docs-separator">
 
 
-          <h2 id="blockquotes">Citações</h2>
+          <h3 id="blockquotes">Citações</h3>
           <p>Para blocos de citação de uma outra fonte dentro do documento</p>
 
-          <h3>Citação Padrão</h3>
+          <h4>Citação Padrão</h4>
           <p>Coloque em volta de um <code>&lt;blockquote&gt;</code> qualquer <abbr title="HyperText Markup Language">HTML</abbr> como citação. Para citações diretas nós recomendamos o uso de <code>&lt;p&gt;</code>.</p>
           <div class="bs-docs-example">
             <blockquote>
@@ -252,7 +255,7 @@
 &lt;/blockquote&gt;
 </pre>
 
-          <h3>Opções de citação</h3>
+          <h4>Opções de citação</h4>
           <p>Estilizar o conteúdo para mudanças ou simples variações da citação padrão</p>
 
           <h4>Nomeando uma fonte</h4>
@@ -418,10 +421,10 @@
         ================================================== -->
         <section id="code">
           <div class="page-header">
-            <h1>Código</h1>
+            <h2>Código</h2>
           </div>
 
-          <h2>Inline</h2>
+          <h3>Inline</h3>
           <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
 <div class="bs-docs-example">
   For example, <code>&lt;section&gt;</code> should be wrapped as inline.
@@ -430,7 +433,7 @@
 Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 </pre>
 
-          <h2>Basic block</h2>
+          <h3>Basic block</h3>
           <p>Use <code>&lt;pre&gt;</code> para múltiplas linhas de código, certifique-se de escapar qualquer caractere especial para renderizar corretamente</p>
 <div class="bs-docs-example">
   <pre>&lt;p&gt;Texto de exemplo aqui&lt;/p&gt;</pre>
@@ -450,10 +453,10 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
         ================================================== -->
         <section id="tables">
           <div class="page-header">
-            <h1>Tabelas</h1>
+            <h2>Tabelas</h2>
           </div>
 
-          <h2>Estilos padrão</h2>
+          <h3>Estilos padrão</h3>
           <p>Para estilização básica&mdash;padding leve e somente um divisor horizontal&mdash;adicione a classe base <code>.table</code> para qualquer <code>&lt;table&gt;</code>.</p>
           <div class="bs-docs-example">
             <table class="table">
@@ -497,7 +500,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Classes opcionais</h2>
+          <h3>Classes opcionais</h3>
           <p>Adicione qualquer das classes seguintes para a classe base <code>.table</code></p>
 
           <h3><code>.table-striped</code></h3>
@@ -666,7 +669,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Classes opcionais de linha</h2>
+          <h3>Classes opcionais de linha</h3>
           <p>Use classes contextuais para cores das linhas da tabela</p>
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -759,7 +762,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Marcaçãod e tabela suportada</h2>
+          <h3>Marcação de tabela suportada</h3>
           <p>Lista de elementos HTML suportados e como eles devem ser usados</p>
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -858,13 +861,13 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
         ================================================== -->
         <section id="forms">
           <div class="page-header">
-            <h1>Formulários</h1>
+            <h2>Formulários</h2>
           </div>
 
-          <h2>Estilos padrão</h2>
+          <h3>Estilos padrão</h3>
           <p>Controles de formulários individuais recebem estilização, mas sem nenhuam classe base no elemento <code>&lt;form&gt;</code> ou mudanças grandes na marcação. Resultados são estagnados, alinhados a esquerda e rótulos no topo dos controles de formulário</p>
           <form class="bs-docs-example">
-            <legend>Legend</legend>
+            <legend>Legenda</legend>
             <label>Nome do título</label>
             <input type="text" placeholder="Digite algo...">
             <span class="help-block">Ajuda de texto em bloco</span>
@@ -890,7 +893,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Layout opcionais</h2>
+          <h3>Layout opcionais</h3>
           <p>Incluído com o Bootstrap três layouts de formulários para usos comuns</p>
 
           <h3>Formulário de busca</h3>
@@ -987,7 +990,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Controles de formulário suportados</h2>
+          <h3>Controles de formulário suportados</h3>
           <p>Exemplos de um controle de formulários suportados em um layout de exemplo</p>
 
           <h3>Inputs</h3>
@@ -1109,7 +1112,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Extendendo controle de formulários</h2>
+          <h3>Extendendo controle de formulários</h3>
           <p>Adicione no topo de controles de browsers existentes, o Bootstrap inclui componentes de formulários bastante úteis</p>
 
           <h3>inputs inseridos antes ou depois</h3>
@@ -1351,7 +1354,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Estados de controle do formuário</h2>
+          <h3>Estados de controle do formuário</h3>
           <p>Dar feedback para os usuários ou visitantes com feedback básico dos estados de controle de formulário e rótulos</p>
 
           <h3>Focus no input</h3>
@@ -1437,10 +1440,10 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
         ================================================== -->
         <section id="buttons">
           <div class="page-header">
-            <h1>Botões</h1>
+            <h2>Botões</h2>
           </div>
 
-          <h2>Default buttons</h2>
+          <h3>Default buttons</h3>
           <p>Estilos de botão podem ser aplicados para qualquer classe <code>.btn</code>. Entretanto, tipicamente você irá acplicar somente em elementos <code>&lt;a&gt;</code> e <code>&lt;button&gt;</code> para melhor renderização</p>
           <table class="table table-bordered table-striped">
             <thead>
@@ -1498,7 +1501,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <p>O IE9 não corta gradiente de fundo em bordas arredondadas, então nós removemos. Outra coisa, IE9 desabilita elementos <code>button</code>, renderizando um texto cinza com uma sombra no texto que não podemos corrigir.</p>
 
 
-          <h2>Tamanhos de botão</h2>
+          <h3>Tamanhos de botão</h3>
           <p>Botões bonitos maiores ou menores? Adicione <code>.btn-large</code>, <code>.btn-small</code>, ou <code>.btn-mini</code></p>
           <div class="bs-docs-example">
             <p>
@@ -1549,7 +1552,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 </pre>
 
 
-          <h2>Estado desabilitado</h2>
+          <h3>Estado desabilitado</h3>
           <p>Fazer botões parecerem não clicáveis deixando mais claro em 50%</p>
 
           <h3>Anchor element</h3>
@@ -1579,7 +1582,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 </pre>
 
 
-          <h2>Uma classe, múltiplas tags</h2>
+          <h3>Uma classe, múltiplas tags</h3>
           <p>Use a classe <code>.btn</code> em um elemento <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, ou elemento <code>&lt;input&gt;</code>.</p>
           <form class="bs-docs-example">
             <a class="btn" href="">Link</a>
@@ -1603,7 +1606,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
         ================================================== -->
         <section id="images">
           <div class="page-header">
-            <h1>Imagens</h1>
+            <h2>Imagens</h2>
           </div>
 
           <p>Adicione classes para uma tag  <code>&lt;img&gt;</code> para facilmente estilizar imagens em qualquer projeto</p>
@@ -1628,10 +1631,10 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
         ================================================== -->
         <section id="icons">
           <div class="page-header">
-            <h1>Ícones <small>por <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small></h1>
+            <h2>Ícones <small>por <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small></h2>
           </div>
 
-          <h2>Ícones glyphs</h2>
+          <h3>Ícones glyphs</h3>
           <p>140 ícones em forma de sprite, disponíveis em um padrão cinza escuro e branco, provido pelo <a href="http://glyphicons.com" target="_blank">Glyphicons</a>.</p>
           <ul class="the-icons clearfix">
             <li><i class="icon-glass"></i> icon-glass</li>
@@ -1787,7 +1790,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Como usar</h2>
+          <h3>Como usar</h3>
           <p>Todos ícones requerem uma tag <code>&lt;i&gt;</code> com uma classe única, prefixada com um <code>icon-</code>. Para usar, coloque o código seguinte em qualquer lugar:</p>
 <pre class="prettyprint linenums">
 &lt;i class="icon-search"&gt;&lt;/i&gt;
@@ -1805,7 +1808,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <hr class="bs-docs-separator">
 
 
-          <h2>Exemplos de ícones</h2>
+          <h3>Exemplos de ícones</h3>
           <p>Use-os como botões, grupos de botões para uma barra de ferramentas, navegação, ou inputs de formulários</p>
 
           <h4>Botões</h4>
