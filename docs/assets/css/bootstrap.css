@@ -651,7 +651,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 5px 0;
+  margin: 10px 0;
   font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1;
@@ -986,14 +986,14 @@ input[type="color"],
 .uneditable-input {
   display: inline-block;
   height: 20px;
-  padding: 4px 6px;
+  padding: 10px 6px;
   margin-bottom: 9px;
   font-size: 14px;
   line-height: 20px;
   color: #555555;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
 }
 
 input,
@@ -1570,9 +1570,9 @@ select:focus:required:invalid:focus {
   *margin-left: 0;
   font-size: 14px;
   vertical-align: top;
-  -webkit-border-radius: 0 3px 3px 0;
-     -moz-border-radius: 0 3px 3px 0;
-          border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
 }
 
 .input-append input:focus,
@@ -1623,17 +1623,17 @@ select:focus:required:invalid:focus {
 
 .input-prepend .add-on:first-child,
 .input-prepend .btn:first-child {
-  -webkit-border-radius: 3px 0 0 3px;
-     -moz-border-radius: 3px 0 0 3px;
-          border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 6px 0 0 6px;
+     -moz-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
 }
 
 .input-append input,
 .input-append select,
 .input-append .uneditable-input {
-  -webkit-border-radius: 3px 0 0 3px;
-     -moz-border-radius: 3px 0 0 3px;
-          border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 6px 0 0 6px;
+     -moz-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
 }
 
 .input-append .add-on,
@@ -1643,9 +1643,9 @@ select:focus:required:invalid:focus {
 
 .input-append .add-on:last-child,
 .input-append .btn:last-child {
-  -webkit-border-radius: 0 3px 3px 0;
-     -moz-border-radius: 0 3px 3px 0;
-          border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
 }
 
 .input-prepend.input-append input,
@@ -1659,20 +1659,21 @@ select:focus:required:invalid:focus {
 .input-prepend.input-append .add-on:first-child,
 .input-prepend.input-append .btn:first-child {
   margin-right: -1px;
-  -webkit-border-radius: 3px 0 0 3px;
-     -moz-border-radius: 3px 0 0 3px;
-          border-radius: 3px 0 0 3px;
+  -webkit-border-radius: 6px 0 0 6px;
+     -moz-border-radius: 6px 0 0 6px;
+          border-radius: 6px 0 0 6px;
 }
 
 .input-prepend.input-append .add-on:last-child,
 .input-prepend.input-append .btn:last-child {
   margin-left: -1px;
-  -webkit-border-radius: 0 3px 3px 0;
-     -moz-border-radius: 0 3px 3px 0;
-          border-radius: 0 3px 3px 0;
+  -webkit-border-radius: 0 6px 6px 0;
+     -moz-border-radius: 0 6px 6px 0;
+          border-radius: 0 6px 6px 0;
 }
 
 input.search-query {
+  height: 20px;
   padding-right: 14px;
   padding-right: 4px \9;
   padding-left: 14px;
