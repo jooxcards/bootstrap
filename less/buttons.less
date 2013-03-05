@@ -10,15 +10,19 @@
 .btn {
   display: inline-block;
   .ie7-inline-block();
-  padding: 4px 14px;
+  padding: 8px 24px;
+  min-width: 100px;
   margin-bottom: 0; // For input.btn
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
-  *line-height: @baseLineHeight;
+  font-family: @fontBariol;
+  font-weight: normal;
+  font-size: @baseFontSize + 3;
+  letter-spacing: 0.03em;
+  line-height: @baseLineHeight + 5;
+  *line-height: @baseLineHeight + 5;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, none);
   border: 1px solid @btnBorder;
   *border: 0; // Remove the border to prevent IE7's black border on input:focus
   border-bottom-color: darken(@btnBorder, 10%);
@@ -28,7 +32,7 @@
 
   // Hover state
   &:hover {
-    color: @grayDark;
+    color: @grayLight;
     text-decoration: none;
     background-color: darken(@white, 10%);
     *background-color: darken(@white, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
@@ -73,8 +77,8 @@
 
 // Large
 .btn-large {
-  padding: 9px 14px;
-  font-size: @baseFontSize + 2px;
+  padding: 16px 70px;
+  font-size: @baseFontSize + 16px;
   line-height: normal;
   .border-radius(500px);
 }
@@ -84,7 +88,7 @@
 
 // Small
 .btn-small {
-  padding: 3px 9px;
+  padding: 6px 10px;
   font-size: @baseFontSize - 2px;
   line-height: @baseLineHeight - 2px;
 }
@@ -145,7 +149,7 @@ input[type="button"] {
 .btn {
   // reset here as of 2.0.3 due to Recess property order
   border-color: #c5c5c5;
-  border-color: rgba(0,0,0,.15) rgba(0,0,0,.15) rgba(0,0,0,.25);
+  border-color: rgba(0, 0, 0, 0.05) rgba(0, 0, 0, 0.05) rgba(0, 0, 0, 0.1);
 }
 .btn-primary {
   .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
@@ -170,7 +174,6 @@ input[type="button"] {
 .btn-inverse {
   .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
 }
-
 
 // Cross-browser Jank
 // --------------------------------------------------
@@ -223,4 +226,41 @@ input[type="submit"].btn {
   color: @linkColorHover;
   text-decoration: underline;
   background-color: transparent;
+}
+
+// Make a button without shadows, clean and white
+.btn-link-white,
+.btn-link-white:active {
+  background-color: @white;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-link-white {
+  border-color: #e8e8e8;
+  cursor: pointer;
+  color: @grayLight;
+  .border-radius(@inputBorderRadius);
+}
+.btn-link-white:hover {
+  color: @gray;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+// Make a button without shadows, clean and blue
+.btn-link-blue,
+.btn-link-blue:active {
+  background-color: @blueClean;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-link-blue {
+  border-color: none;
+  cursor: pointer;
+  color: @white;
+}
+.btn-link-blue:hover {
+  color: @white;
+  text-decoration: none;
+  background-color: #2F5FBE;
 }

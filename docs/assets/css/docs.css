@@ -13,6 +13,7 @@
 body {
   position: relative;
   padding-top: 40px;
+  background: url("../img/bg.png") repeat scroll 0 0 transparent;
 }
 
 /* Code in headings */
@@ -21,7 +22,16 @@ h3 code {
   font-weight: normal;
 }
 
+h1, h2, h3, h4, h5, h6 {text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);}
 
+
+th,td {background: #fff;}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ffffff;
+}
 
 /* Tweak navbar brand link to be super sleek
 -------------------------------------------------- */
@@ -59,6 +69,7 @@ section {
 section > .page-header,
 section > .lead {
   color: #5a5a5a;
+  border-bottom: 1px solid #ccc;
 }
 section > ul li {
   margin-bottom: 5px;
@@ -80,7 +91,9 @@ hr.soften {
   border: 0;
 }
 
-
+.btn {min-width: 150px;}
+.btn-small {min-width: 0;}
+.btn-mini {min-width: 0;}
 
 /* Jumbotrons
 -------------------------------------------------- */
@@ -328,7 +341,7 @@ font-size: 60%;
   margin-bottom: 20px;
 }
 .show-grid [class*="span"] {
-  background-color: #eee;
+  background-color: #ccc;
   text-align: center;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
@@ -366,6 +379,7 @@ font-size: 60%;
   height: 300px;
 }
 .mini-layout {
+  background: #fff;
   margin-bottom: 20px;
   padding: 9px;
 }
@@ -715,6 +729,7 @@ form.bs-docs-example {
   overflow: hidden; /* clear floats */
 }
 .responsive-utilities-test li {
+  background: #fff;
   position: relative;
   float: left;
   width: 25%;
@@ -773,14 +788,14 @@ form.bs-docs-example {
   border: 1px solid #e5e5e5;
 }
 .bs-docs-sidenav > li:first-child > a {
-  -webkit-border-radius: 6px 6px 0 0;
-     -moz-border-radius: 6px 6px 0 0;
-          border-radius: 6px 6px 0 0;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 .bs-docs-sidenav > li:last-child > a {
-  -webkit-border-radius: 0 0 6px 6px;
-     -moz-border-radius: 0 0 6px 6px;
-          border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
 }
 .bs-docs-sidenav > .active > a {
   position: relative;

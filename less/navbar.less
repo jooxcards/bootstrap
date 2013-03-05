@@ -132,6 +132,7 @@
 
 // Navbar search
 // -------------------------
+/*
 .navbar-search {
   position: relative;
   float: left;
@@ -144,7 +145,54 @@
     .border-radius(15px); // redeclare because of specificity of the type attribute
   }
 }
+*/
 
+
+.navbar-search {
+  position: relative;
+  margin-top: 1px;
+  margin-bottom: 0;
+    .search-query {
+       background:url("../img/icon-search.png") no-repeat scroll 300px 7px #fff;
+       padding: 5px 15px;
+       margin-bottom: 0;
+       font-family: @sansFontFamily;
+       font-size: @baseFontSize - 1;
+       line-height: @baseLineHeight;
+       width: 300px;
+       .border-radius(15px);
+          &:focus {
+            background-color:#fefef4;
+            background-position: 300px -47px;
+            }
+       }
+}
+			
+.search-top .dropdown-menu {
+	min-width: 330px;
+	padding: 0;
+	  a {
+	    padding: 10px 15px;
+	    color: #666;
+	    }
+	  li > a:hover,
+	  li > a:focus,
+	  &:hover > a {
+	    color: #fff;
+	    text-decoration: none;
+	    background: #06F;
+	    }
+
+	  li:first-child > a:hover,
+	  li:first-child > a:focus {
+	    .border-radius(5px 5px 0 0);
+	    }
+
+	  li:last-child > a:hover,
+	  li:last-child > a:focus {
+		.border-radius(0 0 5px 5px);
+		}
+}
 
 
 // Static navbar

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Globo.com Bootstrap</title>
+    <title>Joox Bootstrap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -152,6 +152,17 @@
           <h3 id="emphasis">Ênfase</h3>
           <p>Faça o uso da ênfase padrão do HTML com estilos leves</p>
 
+          <h3><code>&lt;a href="#"&gt; &lt;/a&gt;</code></h3>
+          <p>Para criar links de texto <a href="">use a tag href.</a></p>
+          <div class="bs-docs-example">
+            <p>This line of text is meant to be treated as <a href="#">fine and simple link</a>.</p>
+          </div>
+<pre class="prettyprint">
+&lt;p&gt;
+  This line of text is meant to be treated as &lt;a href="#"&gt;fine and simple link&lt;/a&gt;.
+&lt;/p&gt;
+</pre>
+
           <h3><code>&lt;small&gt;</code></h3>
           <p>Para desenfatizar textos em blocos ou inline, <small>use a tag small.</small></p>
           <div class="bs-docs-example">
@@ -164,7 +175,7 @@
 </pre>
 
           <h3><code>&lt;strong&gt;</code></h3>
-          <p>Para enfatizar um pedaço de texto com <strong>important</strong></p>
+          <p>Para enfatizar um pedaço de texto que seja <strong>importante</strong></p>
           <div class="bs-docs-example">
             <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
           </div>
@@ -872,8 +883,11 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
             <input type="text" placeholder="Digite algo...">
             <span class="help-block">Ajuda de texto em bloco</span>
             <label class="checkbox">
-              <input type="checkbox"> Olha eu
+              <input type="checkbox" class="checkbox"> Olha eu
             </label>
+            
+            <input type="checkbox" id="checkbox-1-1" class="checkbox" /><label for="checkbox-1-1"></label> Olha eu
+            
             <button type="submit" class="btn">Enviar</button>
           </form>
 <pre class="prettyprint linenums">
@@ -883,7 +897,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
   &lt;input type="text" placeholder="Digite algo..."&gt;
   &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
   &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; Olha eu
+    &lt;input type="checkbox" class="checkbox"&gt; Olha eu
   &lt;/label&gt;
   &lt;button type="submit" class="btn"&gt;Enviar&lt;/button&gt;
 &lt;/form&gt;
@@ -909,22 +923,55 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 &lt;/form&gt;
 </pre>
 
+          <h3>Formulário de busca do topo do site</h3>
+          <p>HTML do formulário de busca do topo do site com autocomplete.</p>
+			<div class="bs-docs-example form-search">
+				<form class="search-top navbar-search">
+				<input type="text" class="search-query dropdown-toggle" placeholder="Encontre aqui..." data-toggle="dropdown">
+					<ul class="dropdown-menu">
+						<li><a href="#">Ação</a></li>
+						<li><a href="#">Outra ação</a></li>
+						<li><a href="#">Algo a mais aqui</a></li>
+						<li><a href="#">Algo a mais aqui</a></li>
+						<li><a href="#">Algo a mais aqui</a></li>
+						<li><a href="#">Algo a mais aqui</a></li>
+						<li><a href="#">Algo a mais aqui</a></li>
+					</ul>
+				</form>
+			</div>
+<pre class="prettyprint linenums">
+&lt;div class="search-top"&gt;
+  &lt;form class="navbar-search pull-left"&gt;
+  &lt;input type="text" class="search-query dropdown-toggle" placeholder="Encontre aqui..." data-toggle="dropdown"&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Ação&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Outra ação&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Algo a mais aqui&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Algo a mais aqui&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Algo a mais aqui&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Algo a mais aqui&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Algo a mais aqui&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/form&gt;
+&lt;/div&gt;
+</pre>
+
           <h3>Formulário inline</h3>
           <p>Adicione <code>.form-inline</code> para rótulos alinhados a esquerda e controles inline-block para um layout compacto</p>
           <form class="bs-docs-example form-inline">
-            <input type="text" class="input-small" placeholder="Email">
-            <input type="password" class="input-small" placeholder="Senha">
+            <input type="text" class="input-medium" placeholder="Email">
+            <input type="password" class="input-medium" placeholder="Senha">
             <label class="checkbox">
-              <input type="checkbox"> Lembre-se de mim
+              <input type="checkbox" class="checkbox"> Lembre-se de mim
             </label>
             <button type="submit" class="btn">Entrar</button>
           </form>
 <pre class="prettyprint linenums">
 &lt;form class="form-inline"&gt;
-  &lt;input type="text" class="input-small" placeholder="Email"&gt;
-  &lt;input type="password" class="input-small" placeholder="Senha"&gt;
+  &lt;input type="text" class="input-medium" placeholder="Email"&gt;
+  &lt;input type="password" class="input-medium" placeholder="Senha"&gt;
   &lt;label class="checkbox"&gt;
-    &lt;input type="checkbox"&gt; Lembre-se de mim
+    &lt;input type="checkbox" class="checkbox"&gt; Lembre-se de mim
   &lt;/label&gt;
   &lt;button type="submit" class="btn"&gt;Entrar&lt;/button&gt;
 &lt;/form&gt;
@@ -939,15 +986,13 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
             <li>Coloque em volta de qualquer controle associado <code>.controls</code> para alinhamento apropriado</li>
           </ul>
           <form class="bs-docs-example form-horizontal">
-            <legend>Legend</legend>
+            <legend>Legenda</legend>
             <div class="control-group">
-              <label class="control-label" for="inputEmail">Email</label>
               <div class="controls">
                 <input type="text" id="inputEmail" placeholder="Email">
               </div>
             </div>
             <div class="control-group">
-              <label class="control-label" for="inputPassword">Senha</label>
               <div class="controls">
                 <input type="password" id="inputPassword" placeholder="Senha">
               </div>
@@ -955,7 +1000,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
             <div class="control-group">
               <div class="controls">
                 <label class="checkbox">
-                  <input type="checkbox"> Lembre-se de mim
+                  <input type="checkbox" class="checkbox"> Lembre-se de mim
                 </label>
                 <button type="submit" class="btn">Entrar</button>
               </div>
@@ -964,13 +1009,11 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 <pre class="prettyprint linenums">
 &lt;form class="form-horizontal"&gt;
   &lt;div class="control-group"&gt;
-    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
     &lt;div class="controls"&gt;
       &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="control-group"&gt;
-    &lt;label class="control-label" for="inputPassword"&gt;Senha&lt;/label&gt;
     &lt;div class="controls"&gt;
       &lt;input type="password" id="inputPassword" placeholder="Senha"&gt;
     &lt;/div&gt;
@@ -978,7 +1021,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
   &lt;div class="control-group"&gt;
     &lt;div class="controls"&gt;
       &lt;label class="checkbox"&gt;
-        &lt;input type="checkbox"&gt; Lembre-se de mim
+        &lt;input type="checkbox" class="checkbox"&gt; Lembre-se de mim
       &lt;/label&gt;
       &lt;button type="submit" class="btn"&gt;Entrar&lt;/button&gt;
     &lt;/div&gt;
@@ -1012,62 +1055,113 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
 &lt;textarea rows="3"&gt;&lt;/textarea&gt;
 </pre>
 
+
+
+
+
+
+
+
+
           <h3>Checkbox e radio</h3>
           <p>Checkboxes são usados para selecionar várias opções em uma lista enquanto botões radio são usados para selecionar uma opção de várias</p>
           <h4>Padrão (estagnados)</h4>
-          <form class="bs-docs-example">
-            <label class="checkbox">
-              <input type="checkbox" value="">
-              Opção 1 é isto
-            </label>
-            <br>
-            <label class="radio">
-              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-              Opção 1 é isto
-            </label>
-            <label class="radio">
-              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-              A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1
-            </label>
-          </form>
+		<div class="bs-docs-example">
+	  <form action="">	
+			<input type="checkbox" id="checkbox-1-1" class="checkbox"/>
+			  <label for="checkbox-1-1" class="checkbox"></label> 
+				<p>Opção 1 é isto</p>
+				
+			<input type="checkbox" id="checkbox-1-2" class="checkbox"/>
+			  <label for="checkbox-1-2" class="checkbox"></label> 
+				<p>Opção 1 é isto</p>
+				
+			<input type="checkbox" id="checkbox-1-3" class="checkbox"/>
+			  <label for="checkbox-1-3" class="checkbox"></label> 
+				<p>Opção 1 é isto</p>
+		 </form>
+		  
+		 <form action="">
+	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	         <label for="optionsRadios1" class="radio"></label>
+	         <p>Opção 1 é isto</p>
+	
+	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+	         <label for="optionsRadios2" class="radio"></label>
+	         <p>A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1</p>
+	
+	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+	         <label for="optionsRadios3" class="radio"></label>
+	         <p>A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1</p>
+	   </form>
+	   
+	    </div>
+          
+          
+          
 <pre class="prettyprint linenums">
-&lt;label class="checkbox"&gt;
-  &lt;input type="checkbox" value=""&gt;
-  Opção 1 é isto
-&lt;/label&gt;
+&lt;form action=""&gt;	
+  &lt;input type="checkbox" id="checkbox-1-1" class="checkbox" value="" /&gt;
+    &lt;label for="checkbox-1-1" class="checkbox"&gt;&lt;/label&gt; 
+      &lt;p&gt;Opção 1 é isto&lt;/p&gt;
 
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
-  Opção 1 é isto
-&lt;/label&gt;
-&lt;label class="radio"&gt;
-  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
-  A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1
-&lt;/label&gt;
+  &lt;input type="checkbox" id="checkbox-1-2" class="checkbox" value="" /&gt;
+    &lt;label for="checkbox-1-2" class="checkbox"&gt;&lt;/label&gt; 
+      &lt;p&gt;Opção 1 é isto&lt;/p&gt;
+
+  &lt;input type="checkbox" id="checkbox-1-3" class="checkbox" value="" /&gt;
+    &lt;label for="checkbox-1-3" class="checkbox"&gt;&lt;/label&gt; 
+      &lt;p&gt;Opção 1 é isto&lt;/p&gt;
+&lt;/form&gt;
+
+&lt;form action=""&gt;
+  &lt;input type="radio" class="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+    &lt;label for="optionsRadios1" class="radio"&gt;&lt;/label&gt;
+      &lt;p&gt;Opção 1 é isto&lt;/p&gt;
+
+  &lt;input type="radio" class="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+    &lt;label for="optionsRadios2" class="radio"&gt;&lt;/label&gt;
+      &lt;p&gt;A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1&lt;/p&gt;
+
+  &lt;input type="radio" class="radio" name="optionsRadios" id="optionsRadios3" value="option3"&gt;
+    &lt;label for="optionsRadios3" class="radio"&gt;&lt;/label&gt;
+      &lt;p&gt;A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1&lt;/p&gt;
+&lt;/form&gt;
 </pre>
+
+
+
+
+
+
+
+
+
+
+
 
           <h4>checkboxes inline</h4>
           <p>Adicione a classe <code>.inline</code> para uma série de checkboxes ou radios para controlar a aparência na mesma linha</p>
           <form class="bs-docs-example">
             <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+              <input type="checkbox" class="checkbox" id="inlineCheckbox1" value="option1"> 1
             </label>
             <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+              <input type="checkbox" class="checkbox" id="inlineCheckbox2" value="option2"> 2
             </label>
             <label class="checkbox inline">
-              <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+              <input type="checkbox" class="checkbox" id="inlineCheckbox3" value="option3"> 3
             </label>
           </form>
 <pre class="prettyprint linenums">
 &lt;label class="checkbox inline"&gt;
-  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+  &lt;input type="checkbox" class="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
 &lt;/label&gt;
 &lt;label class="checkbox inline"&gt;
-  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+  &lt;input type="checkbox" class="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
 &lt;/label&gt;
 &lt;label class="checkbox inline"&gt;
-  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
+  &lt;input type="checkbox" class="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
 &lt;/label&gt;
 </pre>
 
@@ -1494,6 +1588,16 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
                 <td><code>btn btn-link</code></td>
                 <td>Desenfatizar um botão por fazer parecer como link enquanto mantém o comportamento de botão</td>
               </tr>
+              <tr>
+                <td><button type="button" class="btn btn-link-white">Branco</button></td>
+                <td><code>btn btn-link-white</code></td>
+                <td>Botão branco sem gradientes, efeitos de sombra, e com uma borda cinza simples, usado para paginações.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-link-blue">Azul</button></td>
+                <td><code>btn btn-link-blue</code></td>
+                <td>Botão azul sem gradientes, efeitos de sombra e bordas.</td>
+              </tr>
             </tbody>
           </table>
 
@@ -1501,7 +1605,7 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <p>O IE9 não corta gradiente de fundo em bordas arredondadas, então nós removemos. Outra coisa, IE9 desabilita elementos <code>button</code>, renderizando um texto cinza com uma sombra no texto que não podemos corrigir.</p>
 
 
-          <h3>Tamanhos de botão</h3>
+          <h3>Tamanhos dos botões</h3>
           <p>Botões bonitos maiores ou menores? Adicione <code>.btn-large</code>, <code>.btn-small</code>, ou <code>.btn-mini</code></p>
           <div class="bs-docs-example">
             <p>

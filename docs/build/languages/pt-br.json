@@ -37,6 +37,8 @@
     "Disabled state": "Estado desabilitado",
     "Primary link": "Link primário",
     "Link": "Link",
+    "White": "Branco",
+    "Blue": "Azul",
     "Primary button": "Botão primário",
     "Heads up!": "Atenção!",
     "We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.": "Nós usamos <code>.disabled</code> como uma classe utilitária, similar a classe <code>.active</code>, nenhum prefixo é necessário",
@@ -579,7 +581,8 @@
     "Heading 6": "Cabeçalho 6",
     "Emphasis, address, and abbreviation": "Ênfase, endereço e abreviação",
     "Element": "Elemento",
-    "For emphasizing a snippet of text with <strong>important</strong>": "Para enfatizar um pedaço de texto com <strong>important</strong>",
+    "For create simple text links <a href=\"\">use the link tag.</a>" : "Para criar links de texto <a href=\"\">use a tag href.</a>",
+    "For emphasizing a snippet of text with <strong>important</strong>": "Para enfatizar um pedaço de texto que seja <strong>importante</strong>",
     "None": "Nenhum",
     "For emphasizing a snippet of text with <em>stress</em>": "Para enfatizar um pedaço de texto com <em>stress</em>",
     "Wraps abbreviations and acronyms to show the expanded version on hover": "Incluir opcional <code>title</code> para versão expandida quando o mouse passar por cima",
@@ -997,7 +1000,9 @@
     "Validation states": "Estdos de validação",
     "Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.": "Estilos de botão podem ser aplicados para qualquer classe <code>.btn</code>. Entretanto, tipicamente você irá acplicar somente em elementos <code>&lt;a&gt;</code> e <code>&lt;button&gt;</code> para melhor renderização",
     "Deemphasize a button by making it look like a link while maintaining button behavior": "Desenfatizar um botão por fazer parecer como link enquanto mantém o comportamento de botão",
-    "Button sizes": "Tamanhos de botão",
+    "Blue button without gradients, shadow, effects and border.": "Botão azul sem gradientes, efeitos de sombra e bordas.",
+    "White button without gradients, shadow, effects and with a simple gray border, use to paginations.": "Botão branco sem gradientes, efeitos de sombra, e com uma borda cinza simples, usado para paginações.",
+    "Button sizes": "Tamanhos dos botões",
     "Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.": "Botões bonitos maiores ou menores? Adicione <code>.btn-large</code>, <code>.btn-small</code>, ou <code>.btn-mini</code>",
     "Default button": "Padrão de botão",
     "Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.": "Criar um botões em bloco&mdash;aqueles que se espalha para a largura completa do elemento pai &mdash; adicionando <code>.btn-block</code>.",
@@ -1305,6 +1310,8 @@
     "There's a alternative way to stylize borders using a little css trick to simulate inner-borders. To apply this border just add <code>inner-border</code> class inside <code>a</code> tag.": "Há uma maneira alternativa de estilizar bordas usando um pequeno truque para simular bordas internas. Para aplicar esta borda adicione a classe <code>inner-border</code> dentro de uma tag <code>a</code>.",
     "Please note that all JavaScript plugins require jQuery to be included.": "Por favor note que todos plugins JavaScript requerem que o jQuery seja incluído",
     "You must manage the position of a pinned element and the behavior of its immediate parent. Position is controlled by <code>affix</code>, <code>affix-top</code>, and <code>affix-bottom</code>. Remember to check for a potentially collapsed parent when the affix kicks in as it's removing content from the normal flow of the page.": "Você deve gerenciar a posição de um elemento fixo e o comportamento do seu pai mais próximo. A posição é controlada por <code>affix</code>, <code>affix-top</code>, e <code>affix-bottom</code>. Lembre-se de checar por um pai colapsado quando o affix remove o conteúdo do fluxo normal da página.",
-    "More info":"Mais informações"
+    "More info":"Mais informações",
+    "Top search form":"Formulário de busca do topo do site",
+    "Top search form code with autocomplete.":"HTML do formulário de busca do topo do site com autocomplete."
   }
 }
