@@ -999,9 +999,9 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
             </div>
             <div class="control-group">
               <div class="controls">
-                <label class="checkbox">
-                  <input type="checkbox" class="checkbox"> Lembre-se de mim
-                </label>
+							<input type="checkbox" id="checkbox-1" class="checkbox"/>
+							  <label for="checkbox-1" class="checkbox"></label> 
+								<p>Lembre-se de mim</p>
                 <button type="submit" class="btn">Entrar</button>
               </div>
             </div>
@@ -1066,36 +1066,34 @@ Por exemplo, &lt;code&gt;&lt;section&gt;&lt;/code&gt; deve ser colocado inline
           <h3>Checkbox e radio</h3>
           <p>Checkboxes são usados para selecionar várias opções em uma lista enquanto botões radio são usados para selecionar uma opção de várias</p>
           <h4>Padrão (estagnados)</h4>
-		<div class="bs-docs-example">
-	  <form action="">	
-			<input type="checkbox" id="checkbox-1-1" class="checkbox"/>
-			  <label for="checkbox-1-1" class="checkbox"></label> 
+	  <div class="bs-docs-example">
+
+			<input type="checkbox" id="checkbox-1" class="checkbox"/>
+			  <label for="checkbox-1" class="checkbox"></label> 
 				<p>Opção 1 é isto</p>
 				
-			<input type="checkbox" id="checkbox-1-2" class="checkbox"/>
-			  <label for="checkbox-1-2" class="checkbox"></label> 
+			<input type="checkbox" id="checkbox-2" class="checkbox"/>
+			  <label for="checkbox-2" class="checkbox"></label> 
 				<p>Opção 1 é isto</p>
 				
-			<input type="checkbox" id="checkbox-1-3" class="checkbox"/>
-			  <label for="checkbox-1-3" class="checkbox"></label> 
+			<input type="checkbox" id="checkbox-3" class="checkbox"/>
+			  <label for="checkbox-3" class="checkbox"></label> 
 				<p>Opção 1 é isto</p>
-		 </form>
-		  
-		 <form action="">
-	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	         <label for="optionsRadios1" class="radio"></label>
-	         <p>Opção 1 é isto</p>
+
+
+	    <input type="radio" class="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	       <label for="optionsRadios1" class="radio"></label>
+	       <p>Opção 1 é isto</p>
 	
-	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-	         <label for="optionsRadios2" class="radio"></label>
-	         <p>A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1</p>
+	    <input type="radio" class="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+	       <label for="optionsRadios2" class="radio"></label>
+	       <p>A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1</p>
 	
-	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-	         <label for="optionsRadios3" class="radio"></label>
-	         <p>A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1</p>
-	   </form>
-	   
-	    </div>
+	    <input type="radio" class="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+	       <label for="optionsRadios3" class="radio"></label>
+	       <p>A opção 2 pode ser algo mais e selecionando irá desselacionar a opção 1</p>
+	         	   
+	  </div>
           
           
           

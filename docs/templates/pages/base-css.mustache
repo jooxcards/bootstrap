@@ -931,9 +931,9 @@
             </div>
             <div class="control-group">
               <div class="controls">
-                <label class="checkbox">
-                  <input type="checkbox" class="checkbox"> {{_i}}Remember me{{/i}}
-                </label>
+							<input type="checkbox" id="checkbox-1" class="checkbox"/>
+							  <label for="checkbox-1" class="checkbox"></label> 
+								<p>{{_i}}Remember me{{/i}}</p>
                 <button type="submit" class="btn">{{_i}}Sign in{{/i}}</button>
               </div>
             </div>
@@ -998,36 +998,34 @@
           <h3>{{_i}}Checkboxes and radios{{/i}}</h3>
           <p>{{_i}}Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.{{/i}}</p>
           <h4>{{_i}}Default (stacked){{/i}}</h4>
-		<div class="bs-docs-example">
-	  <form action="">	
-			<input type="checkbox" id="checkbox-1-1" class="checkbox"/>
-			  <label for="checkbox-1-1" class="checkbox"></label> 
+	  <div class="bs-docs-example">
+
+			<input type="checkbox" id="checkbox-1" class="checkbox"/>
+			  <label for="checkbox-1" class="checkbox"></label> 
 				<p>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</p>
 				
-			<input type="checkbox" id="checkbox-1-2" class="checkbox"/>
-			  <label for="checkbox-1-2" class="checkbox"></label> 
+			<input type="checkbox" id="checkbox-2" class="checkbox"/>
+			  <label for="checkbox-2" class="checkbox"></label> 
 				<p>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</p>
 				
-			<input type="checkbox" id="checkbox-1-3" class="checkbox"/>
-			  <label for="checkbox-1-3" class="checkbox"></label> 
+			<input type="checkbox" id="checkbox-3" class="checkbox"/>
+			  <label for="checkbox-3" class="checkbox"></label> 
 				<p>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</p>
-		 </form>
-		  
-		 <form action="">
-	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-	         <label for="optionsRadios1" class="radio"></label>
-	         <p>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</p>
+
+
+	    <input type="radio" class="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+	       <label for="optionsRadios1" class="radio"></label>
+	       <p>{{_i}}Option one is this and that&mdash;be sure to include why it's great{{/i}}</p>
 	
-	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-	         <label for="optionsRadios2" class="radio"></label>
-	         <p>{{_i}}Option two can be something else and selecting it will deselect option one{{/i}}</p>
+	    <input type="radio" class="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+	       <label for="optionsRadios2" class="radio"></label>
+	       <p>{{_i}}Option two can be something else and selecting it will deselect option one{{/i}}</p>
 	
-	      <input type="radio" class="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-	         <label for="optionsRadios3" class="radio"></label>
-	         <p>{{_i}}Option two can be something else and selecting it will deselect option one{{/i}}</p>
-	   </form>
-	   
-	    </div>
+	    <input type="radio" class="radio" name="optionsRadios" id="optionsRadios3" value="option3">
+	       <label for="optionsRadios3" class="radio"></label>
+	       <p>{{_i}}Option two can be something else and selecting it will deselect option one{{/i}}</p>
+	         	   
+	  </div>
           
           
           
