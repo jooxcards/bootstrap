@@ -244,9 +244,12 @@ textarea {
 .radio.inline,
 .checkbox.inline {
   display: inline-block;
-  padding-top: 5px;
+  padding-top: 0;
   margin-bottom: 0;
   vertical-align: middle;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 .radio.inline + .radio.inline,
 .checkbox.inline + .checkbox.inline {
@@ -257,45 +260,42 @@ textarea {
 
 
 .checkbox {
-	display: none;
-}
-
-.checkbox + label {
-	background-color: #fafafa;
-	border: 1px solid #cacece;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	.border-radius(3px);
-	display: inline-block;
-	position: relative;
-	margin-bottom: 0;
-}
-
-.checkbox + label:hover,
-.checkbox:checked + label:hover {
-	cursor: pointer;
-}
-
-.checkbox + label:active,
-.checkbox:checked + label:active {
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-
-.checkbox:checked + label {
-	background-color: #FAFAFA;
-	border: 1px solid #adb8c0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #33CC33;
-}
-
-.checkbox:checked + label:after {
-	content: '\2714';
-	font-size: @baseFontSize + 8;
-	position: absolute;
-	top: -2px;
-	left: 2px;
-	color: #33CC33;
-}
-
+	display: none !important; // 'display:none' for hide checkbox and show label with custom css
+  }
+	.checkbox + label {
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    .border-radius(3px);
+    display: inline-block !important; // important is important
+    .ie7-inline-block();
+    position: relative;
+    margin-bottom: -4px;
+    height: 0px;
+    width: 0px;
+    }
+	.checkbox + label:hover,
+	.checkbox:checked + label:hover {
+    cursor: pointer;
+    }
+	.checkbox + label:active,
+	.checkbox:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+    }
+	.checkbox:checked + label {
+    background-color: #FAFAFA;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #33CC33;
+    }
+	.checkbox:checked + label:after {
+    content: '\2714';
+    font-size: @baseFontSize + 8;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    color: #33CC33;
+	}
 
 
 
@@ -303,48 +303,45 @@ textarea {
 
 .radio {
 	display: none;
-}
-
-.radio + label {
-	-webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	.border-radius(50px);
-	display: inline-block;
-	position: relative;
-	margin-bottom: 0;
-}
-
-.radio:checked + label:after {
-	content: ' ';
-	width: 10px;
-	height: 10px;
-	border-radius: 50px;
-	position: absolute;
-	top: 4px;
-	background: #33CC33;
-	text-shadow: 0px;
-	left: 4px;
-	font-size: 32px;
-}
-
-.radio:checked + label {
-	background-color: #e9ecee;
-	color: #99a1a7;
-	border: 1px solid #adb8c0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-.radio + label:active, .radio:checked + label:active {
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-
-.radio + label:hover,
-.radio:checked + label:hover {
-	cursor: pointer;
-}
-
+	}
+	.radio + label {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #cacece;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    .border-radius(50px);
+    display: inline-block;
+    position: relative;
+    margin-bottom: -4px;
+    height: 0px;
+    width: 0px;
+    }
+  .radio:checked + label:after {
+    content: ' ';
+    width: 10px;
+    height: 10px;
+    .border-radius(50px);
+    position: absolute;
+    top: 4px;
+    background: #33CC33;
+    text-shadow: 0px;
+    left: 4px;
+    font-size: 32px;
+    }
+  .radio:checked + label {
+    background-color: #e9ecee;
+    color: #99a1a7;
+    border: 1px solid #adb8c0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+    }
+  .radio + label:active,
+  .radio:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+    }
+  .radio + label:hover,
+  .radio:checked + label:hover {
+    cursor: pointer;
+    }
 
 // INPUT SIZES
 // -----------

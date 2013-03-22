@@ -11,7 +11,6 @@
   display: inline-block;
   .ie7-inline-block();
   padding: 8px 24px;
-  min-width: 100px;
   margin-bottom: 0; // For input.btn
   font-family: @fontBariol;
   font-weight: normal;
@@ -175,6 +174,16 @@ input[type="button"] {
   .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
 }
 
+// Action button appears as green
+.btn-green {
+  .buttonBackground(@btnGreenBackground, @btnGreenBackgroundHighlight);
+}
+
+// Action blue button without shadows and clear
+.btn-blue {
+  .buttonBackground(@btnBlueBackground, @btnBlueBackgroundHighlight);
+}
+
 // Cross-browser Jank
 // --------------------------------------------------
 
@@ -229,38 +238,20 @@ input[type="submit"].btn {
 }
 
 // Make a button without shadows, clean and white
-.btn-link-white,
-.btn-link-white:active {
+.btn-white,
+.btn-white:active {
   background-color: @white;
   background-image: none;
   .box-shadow(none);
 }
-.btn-link-white {
+.btn-white {
   border-color: #e8e8e8;
   cursor: pointer;
   color: @grayLight;
   .border-radius(@inputBorderRadius);
 }
-.btn-link-white:hover {
+.btn-white:hover {
   color: @gray;
   text-decoration: none;
   background-color: #f5f5f5;
-}
-
-// Make a button without shadows, clean and blue
-.btn-link-blue,
-.btn-link-blue:active {
-  background-color: @blueClean;
-  background-image: none;
-  .box-shadow(none);
-}
-.btn-link-blue {
-  border-color: none;
-  cursor: pointer;
-  color: @white;
-}
-.btn-link-blue:hover {
-  color: @white;
-  text-decoration: none;
-  background-color: #2F5FBE;
 }
