@@ -155,7 +155,7 @@ input[type="checkbox"] {
 // Set the height of select and file controls to match text inputs
 select,
 input[type="file"] {
-  height: 30px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+  height: 40px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
   *margin-top: 4px; /* For IE7, add top margin to align select with labels */
   line-height: 30px;
 }
@@ -528,12 +528,13 @@ select:focus:required:invalid {
   .add-on {
     display: inline-block;
     width: auto;
-    height: @baseLineHeight;
+    height: @baseLineHeight + 12;
     min-width: 16px;
-    padding: 4px 5px;
-    font-size: @baseFontSize;
+    padding: 4px 10px;
+    font-size: @baseFontSize + 10;
     font-weight: normal;
-    line-height: @baseLineHeight;
+    line-height: @baseLineHeight + 12;
+    *line-height: @baseLineHeight + 12;
     text-align: center;
     text-shadow: 0 1px 0 @white;
     background-color: @grayLighter;
