@@ -10,6 +10,8 @@
 /* Body and structure
 -------------------------------------------------- */
 
+* {}
+
 body {
   position: relative;
   padding-top: 40px;
@@ -537,10 +539,10 @@ h2 + .row {
 /* Icons
 ------------------------- */
 .the-icons {list-style-type:none;margin:0}
-.the-icons li {cursor:pointer;line-height:32px;height:32px;padding-left:12px;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}
+.the-icons li {cursor:pointer;line-height:32px;height:32px;}
 .the-icons li [class^=icon-],
 .the-icons li [class*=" icon-"] {width:32px;font-size:14px}
-.the-icons li:hover {background:#fff;border:1px solid #ccc;line-height:32px}
+.the-icons li:hover {line-height:32px}
 .the-icons li:hover [class^=icon-],
 .the-icons li:hover [class*=" icon-"] {font-size:28px;vertical-align:middle}
 .the-icons li:hover [class^=icon-]:before,
