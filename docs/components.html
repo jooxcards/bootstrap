@@ -99,7 +99,7 @@
           <li><a href="#navbar"><i class="icon-chevron-right"></i> Barra de navegação</a></li>
           <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs(migalhas de pão)</a></li>
           <li><a href="#pagination"><i class="icon-chevron-right"></i> Paginação</a></li>
-          <li><a href="#labels-badges"><i class="icon-chevron-right"></i> rótulos e emblemas</a></li>
+          <li><a href="#labels-badges"><i class="icon-chevron-right"></i> Rótulos e emblemas</a></li>
           <li><a href="#typography"><i class="icon-chevron-right"></i> Tipografia</a></li>
           <li><a href="#thumbnails"><i class="icon-chevron-right"></i> Imagem miniaturas</a></li>
           <li><a href="#alerts"><i class="icon-chevron-right"></i> Alertas</a></li>
@@ -115,10 +115,10 @@
         ================================================== -->
         <section id="dropdowns">
           <div class="page-header">
-            <h1>Menus dropdown</h1>
+            <h2>Menus dropdown</h2>
           </div>
 
-          <h2>Exemplo</h2>
+          <h3>Exemplo</h3>
           <p>Menus alternáveis e contextuais para exibir listas de links. Tornar interativo com um <a href="./javascript.html#dropdowns">plugin dropdown de javascript</a>.</p>
           <div class="bs-docs-example">
             <div class="dropdown clearfix">
@@ -141,7 +141,7 @@
 &lt;/ul&gt;
 </pre>
 
-          <h2>Marcação</h2>
+          <h3>Marcação</h3>
           <p>Olhando somente o menu dropdown, aqui está o HTML requerido. Você precisa colocar em volta do elemento que dispara o menu dropdown em um <code>.dropdown</code>, ou outro elemento que declara <code>position: relative;</code>.. Então simplesmente cria o menu.</p>
 
 <pre class="prettyprint linenums">
@@ -157,10 +157,10 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>Opções</h2>
+          <h3>Opções</h3>
           <p>Alinhar menus para a direita e adicionar níveis diferentes de dropdowns</p>
 
-          <h3>Alinhando os menus</h3>
+          <h4>Alinhando os menus</h4>
           <p>Adicione <code>.pull-right</code> para um <code>.dropdown-menu</code> para alinhar a direita um menu dropdown</p>
 <pre class="prettyprint linenums">
 &lt;ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel"&gt;
@@ -168,7 +168,7 @@
 &lt;/ul&gt;
 </pre>
 
-          <h3>Sub menus em um dropdown</h3>
+          <h4>Sub menus em um dropdown</h4>
           <p>Adicione um nível extra de menu dropdown, aparecendo no hover como é feito no OS X, com adição de algumas marcações. Adicione <code>.dropdown-submenu</code> em qualquer <code>li</code> em um dropdown existente para estilização automática</p>
           <div class="bs-docs-example">
             <div class="dropdown clearfix">
@@ -211,13 +211,13 @@
         ================================================== -->
         <section id="buttonGroups">
           <div class="page-header">
-            <h1>Grupos de botões</h1>
+            <h2>Grupos de botões</h2>
           </div>
 
-          <h2>Exemplos</h2>
+          <h3>Exemplos</h3>
           <p>Duas opções básicas, ao longe de mais variações específicas</p>
 
-          <h3>Grupo de botão único</h3>
+          <h4>Grupo de botão único</h4>
           <p>Coloque em volta de uma série de botões <code>.btn</code> uma classe <code>.btn-group</code>.</p>
           <div class="bs-docs-example">
             <div class="btn-group" style="margin: 9px 0 5px;">
@@ -234,7 +234,7 @@
 &lt;/div&gt;
 </pre>
 
-          <h3>Grupos de botões múltiplos</h3>
+          <h4>Grupos de botões múltiplos</h4>
           <p>Combine as escolhas da estrutura <code>&lt;div class="btn-group"&gt;</code> em  um <code>&lt;div class="btn-toolbar"&gt;</code> para componentes mais complexos.</p>
           <div class="bs-docs-example">
             <div class="btn-toolbar" style="margin: 0;">
@@ -262,7 +262,7 @@
 &lt;/div&gt;
 </pre>
 
-          <h3>Grupos de botões verticais</h3>
+          <h4>Grupos de botões verticais</h4>
           <p>Faça uma coleção de botões aparecerm verticalmente estagnados ao invés de horizontalmente</p>
           <div class="bs-docs-example">
             <div class="btn-group btn-group-vertical">
@@ -295,91 +295,186 @@
         ================================================== -->
         <section id="buttonDropdowns">
           <div class="page-header">
-            <h1>Botões de menu dropdown</h1>
+            <h2>Botões de menu dropdown</h2>
           </div>
 
 
-          <h2>Visão geral e exemplos</h2>
+          <h3>Visão geral e exemplos</h3>
           <p>Use qualquer botão para disparar um menu dropdown colocados dentro de um <code>.btn-group</code> e provê o markup apropriado</p>
           <div class="bs-docs-example">
-            <div class="btn-toolbar" style="margin: 0;">
-              <div class="btn-group">
-                <button class="btn dropdown-toggle" data-toggle="dropdown">Ação <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Ação <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Perigo <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Aviso <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Sucesso <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Informações <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverso <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
+            <div class="btn-toolbar row" style="margin: 0;">
+
+
+              
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn dropdown-toggle" data-toggle="dropdown">Ação <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Ação <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+              
+              
+              
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">Perigo <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Aviso <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-success dropdown-toggle" data-toggle="dropdown">Sucesso <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">Informações <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown">Inverso <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+             </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">Link <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-white dropdown-toggle" data-toggle="dropdown">Branco <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>              
+              
+              
+              
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-blue dropdown-toggle" data-toggle="dropdown">Azul <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+
+
+              <div class="span2" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-green dropdown-toggle" data-toggle="dropdown">Verde <i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+              
             </div><!-- /btn-toolbar -->
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
   &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
     Ação
-    &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;i class="icon-caret-down"&gt;&lt;/i&gt;
   &lt;/a&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;!-- Links de menu dropdown --&gt;
@@ -392,7 +487,7 @@
           <div class="bs-docs-example">
             <div class="btn-toolbar" style="margin: 0;">
               <div class="btn-group">
-                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">Botão grande <span class="caret"></span></button>
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown">Botão grande <i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -402,7 +497,7 @@
                 </ul>
               </div><!-- /btn-group -->
               <div class="btn-group">
-                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">Botão pequeno <span class="caret"></span></button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown">Botão pequeno <i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -412,7 +507,7 @@
                 </ul>
               </div><!-- /btn-group -->
               <div class="btn-group">
-                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Botão miniatura <span class="caret"></span></button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">Botão miniatura <i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -435,91 +530,178 @@
           <h2>Quebrando botões dropdown</h2>
           <p>Para construir estilos e markup de grupos de botões, nós podemos simplesmente quebrar os botões. A funcionalidade de quebrar botões permite que você tenha uma ação padrão na esquerda e um dropdown na direita com links contextuais.</p>
           <div class="bs-docs-example">
-            <div class="btn-toolbar" style="margin: 0;">
-              <div class="btn-group">
-                <button class="btn">Ação</button>
-                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-primary">Ação</button>
-                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-danger">Perigo</button>
-                <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-warning">Aviso</button>
-                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-success">Sucesso</button>
-                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-info">Informações</button>
-                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
-              <div class="btn-group">
-                <button class="btn btn-inverse">Inverso</button>
-                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Ação</a></li>
-                  <li><a href="#">Outra ação</a></li>
-                  <li><a href="#">Algo a mais aqui</a></li>
-                  <li class="divider"></li>
-                  <li><a href="#">Link separador</a></li>
-                </ul>
-              </div><!-- /btn-group -->
+            <div class="btn-toolbar row-fluid" style="margin: 0;">
+              
+              
+              
+              <div class="span3" style="margin-bottom: 40px; margin-left: 12px;">
+                <div class="btn-group">
+                  <button class="btn">Ação</button>
+                  <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+              
+              
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-primary">Ação</button>
+                  <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+              
+              
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-danger">Perigo</button>
+                  <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+              
+              
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-warning">Aviso</button>
+                  <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+                
+                
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-success">Sucesso</button>
+                  <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+                
+                
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-info">Informações</button>
+                  <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+                
+                
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-inverse">Inverso</button>
+                  <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+            
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-link">Link</button>
+                  <button class="btn btn-link dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+            
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-white">Branco</button>
+                  <button class="btn btn-white dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+            
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-blue">Azul</button>
+                  <button class="btn btn-blue dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+            
+              <div class="span3" style="margin-bottom:40px;">
+                <div class="btn-group">
+                  <button class="btn btn-green">Verde</button>
+                  <button class="btn btn-green dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Ação</a></li>
+                    <li><a href="#">Outra ação</a></li>
+                    <li><a href="#">Algo a mais aqui</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Link separador</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div>
+            
+            
             </div><!-- /btn-toolbar -->
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="btn-group"&gt;
   &lt;button class="btn"&gt;Ação&lt;/button&gt;
   &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
-    &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;i class="icon-caret-down"&gt;&lt;/i&gt;
   &lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;!-- Links de menu dropdown --&gt;
@@ -533,7 +715,7 @@
             <div class="btn-toolbar">
               <div class="btn-group">
                 <button class="btn btn-large">Ação maior</button>
-                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <button class="btn btn-large dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -546,7 +728,7 @@
             <div class="btn-toolbar">
               <div class="btn-group">
                 <button class="btn btn-small">Ação pequena</button>
-                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <button class="btn btn-small dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -559,7 +741,7 @@
             <div class="btn-toolbar">
               <div class="btn-group">
                 <button class="btn btn-mini">Ação miniatura</button>
-                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -574,7 +756,7 @@
 &lt;div class="btn-group"&gt;
   &lt;button class="btn btn-mini"&gt;Ação&lt;/button&gt;
   &lt;button class="btn btn-mini dropdown-toggle" data-toggle="dropdown"&gt;
-    &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;i class="icon-caret-down"&gt;&lt;/i&gt;
   &lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;!-- Links de menu dropdown --&gt;
@@ -588,7 +770,7 @@
             <div class="btn-toolbar" style="margin: 0;">
               <div class="btn-group dropup">
                 <button class="btn">Dropup</button>
-                <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -599,7 +781,7 @@
               </div><!-- /btn-group -->
               <div class="btn-group dropup">
                 <button class="btn primary">Dropup da direita</button>
-                <button class="btn primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                <button class="btn primary dropdown-toggle" data-toggle="dropdown"><i class="icon-caret-down"></i></button>
                 <ul class="dropdown-menu pull-right">
                   <li><a href="#">Ação</a></li>
                   <li><a href="#">Outra ação</a></li>
@@ -614,7 +796,7 @@
 &lt;div class="btn-group dropup"&gt;
   &lt;button class="btn"&gt;Dropup&lt;/button&gt;
   &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
-    &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;i class="icon-caret-down"&gt;&lt;/i&gt;
   &lt;/button&gt;
   &lt;ul class="dropdown-menu"&gt;
     &lt;!-- Links de menu dropdown --&gt;
@@ -630,13 +812,13 @@
         ================================================== -->
         <section id="navs">
           <div class="page-header">
-            <h1>Navegação: abas, pílulas e listas</small></h1>
+            <h2>Navegação: abas, pílulas e listas</small></h2>
           </div>
 
-          <h2>Padrões leves <small>Mesmo markup, classes diferentes</small></h2>
+          <h3>Padrões leves <small>Mesmo markup, classes diferentes</small></h3>
           <p>Todos componentes de navegação aqui&mdash;abas, pílulas, e listas&mdash;<strong>compartilham a mesma marcação base e estilos</strong> através da classe <code>.nav</code></p>
 
-          <h3>Tabs básica</h3>
+          <h4>Tabs básica</h4>
           <p>Use um regular <code>&lt;ul&gt;</code> de links e adicione a classe <code>.nav-tabs</code>:</p>
           <div class="bs-docs-example">
             <ul class="nav nav-tabs">
@@ -655,7 +837,7 @@
 &lt;/ul&gt;
 </pre>
 
-          <h3>Pílulas básicas</h3>
+          <h4>Pílulas básicas</h4>
           <p>Use algum HTML, mas use <code>.nav-pills</code> ao invés disto</p>
           <div class="bs-docs-example">
             <ul class="nav nav-pills">
@@ -674,7 +856,7 @@
 &lt;/ul&gt;
 </pre>
 
-          <h3>Estado desabilitado</h3>
+          <h4>Estado desabilitado</h4>
           <p>Para qualquer componente de navegação(abas, pílulas e lista), adicione <code>.disabled</code> para <strong>links cinzas e para efeitos de hover</strong>. Links irão permanecer clicáveis, entretanto, ao menos que um javascript seja implementado para prever estes cliques</p>
           <div class="bs-docs-example">
             <ul class="nav nav-pills">
@@ -691,17 +873,17 @@
 &lt;/ul&gt;
 </pre>
 
-          <h3>Alinhamento do componente</h3>
+          <h4>Alinhamento do componente</h4>
           <p>Para alinhar links de navegação, use as classes <code>.pull-left</code> ou <code>.pull-right</code>. Ambas as classes irão adicionar um float css na direção especificada </p>
 
 
           <hr class="bs-docs-separator">
 
 
-          <h2>Estagnadas</h2>
+          <h3>Estagnadas</h3>
           <p>Com abas e pílulas são horizontais por padrão, mas somente adicione uma classe, a <code>.nav-stacked</code>, para deixar verticalmente estagnados</p>
 
-          <h3>Tabs estagnadas</h3>
+          <h4>Tabs estagnadas</h4>
           <div class="bs-docs-example">
             <ul class="nav nav-tabs nav-stacked">
               <li class="active"><a href="#">Início</a></li>
@@ -715,7 +897,7 @@
 &lt;/ul&gt;
 </pre>
 
-          <h3>Pílulas estagnadas</h3>
+          <h4>Pílulas estagnadas</h4>
           <div class="bs-docs-example">
             <ul class="nav nav-pills nav-stacked">
               <li class="active"><a href="#">Início</a></li>
@@ -733,10 +915,10 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>Dropdowns</h2>
+          <h3>Dropdowns</h3>
           <p>Adicoine menus dropdown com um HTML extra e um <a href="./javascript.html#dropdowns">Plugin javascript de dropdown</a>. </p>
 
-          <h3>Tabs com dropdown</h3>
+          <h4>Tabs com dropdown</h4>
           <div class="bs-docs-example">
             <ul class="nav nav-tabs">
               <li class="active"><a href="#">Início</a></li>
@@ -769,7 +951,7 @@
 &lt;/ul&gt;
 </pre>
 
-          <h3>Pílulas com dropdowns</h3>
+          <h4>Pílulas com dropdowns</h4>
           <div class="bs-docs-example">
             <ul class="nav nav-pills">
               <li class="active"><a href="#">Início</a></li>
@@ -806,10 +988,10 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>Listas de navegação</h2>
+          <h3>Listas de navegação</h3>
           <p>Uma simples e fácil maneira de construir grupos de navegação em links com cabeçalhos opcionais. Eles são usados de melhor forma em barras laterais como o finder in OS X.</p>
 
-          <h3>Exemplo de listas de navegação</h3>
+          <h4>Exemplo de listas de navegação</h4>
           <p>Pegue uma lista de links e adicione <code>class="nav nav-list"</code>:</p>
           <div class="bs-docs-example">
             <div class="well" style="max-width: 340px; padding: 8px 0;">
@@ -839,7 +1021,7 @@
             Para aninhamento com uma lista de navegação, <code>class="nav nav-list"</code> em um <code>&lt;ul&gt;</code>.
           </p>
 
-          <h3>Divisores horizontais</h3>
+          <h4>Divisores horizontais</h4>
           <p>Adicione um divisor horizontal simplesmente com um item de lista vazio com a classe <code>.divider</code>, como descrito:</p>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-list"&gt;
@@ -853,10 +1035,10 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>Navegação tabeável</h2>
+          <h3>Navegação tabeável</h3>
           <p>Traga suas abas para vida com um simples plugin para alternar entre conteúdo via abas. O Bootstrap integra tabs em abas em quatro estilos, topo (padrão), direita, parte inferior, e esquerda.</p>
 
-          <h3>Exemplo tabeável</h3>
+          <h4>Exemplo tabeável</h4>
           <p>Para fazer abas tabeáveis, criar um <code>.tab-pane</code> com um id único para cada aba e coloque em volta delas um <code>.tab-content</code></p>
           <div class="bs-docs-example">
             <div class="tabbable" style="margin-bottom: 18px;">
@@ -1603,7 +1785,7 @@
         ================================================== -->
         <section id="labels-badges">
           <div class="page-header">
-            <h1>rótulos e emblemas</h1>
+            <h1>Rótulos e emblemas</h1>
           </div>
           <h3>Labels(rótulos)</h3>
           <table class="table table-bordered table-striped">

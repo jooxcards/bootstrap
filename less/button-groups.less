@@ -43,7 +43,7 @@
 }
 .btn-group > .btn,
 .btn-group > .dropdown-menu {
-  font-size: @baseFontSize; // redeclare as part 2 of font-size inline-block hack
+  font-size: @baseFontSize + 3; // redeclare as part 2 of font-size inline-block hack
 }
 
 // Reset fonts for other sizes
@@ -60,41 +60,41 @@
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group > .btn:first-child {
   margin-left: 0;
-     -webkit-border-top-left-radius: 4px;
-         -moz-border-radius-topleft: 4px;
-             border-top-left-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-      -moz-border-radius-bottomleft: 4px;
-          border-bottom-left-radius: 4px;
+     -webkit-border-top-left-radius: 500px;
+         -moz-border-radius-topleft: 500px;
+             border-top-left-radius: 500px;
+  -webkit-border-bottom-left-radius: 500px;
+      -moz-border-radius-bottomleft: 500px;
+          border-bottom-left-radius: 500px;
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
-     -webkit-border-top-right-radius: 4px;
-         -moz-border-radius-topright: 4px;
-             border-top-right-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-      -moz-border-radius-bottomright: 4px;
-          border-bottom-right-radius: 4px;
+     -webkit-border-top-right-radius: 500px;
+         -moz-border-radius-topright: 500px;
+             border-top-right-radius: 500px;
+  -webkit-border-bottom-right-radius: 500px;
+      -moz-border-radius-bottomright: 500px;
+          border-bottom-right-radius: 500px;
 }
 // Reset corners for large buttons
 .btn-group > .btn.large:first-child {
   margin-left: 0;
-     -webkit-border-top-left-radius: 6px;
-         -moz-border-radius-topleft: 6px;
-             border-top-left-radius: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-      -moz-border-radius-bottomleft: 6px;
-          border-bottom-left-radius: 6px;
+     -webkit-border-top-left-radius: 500px;
+         -moz-border-radius-topleft: 500px;
+             border-top-left-radius: 500px;
+  -webkit-border-bottom-left-radius: 500px;
+      -moz-border-radius-bottomleft: 500px;
+          border-bottom-left-radius: 500px;
 }
 .btn-group > .btn.large:last-child,
 .btn-group > .large.dropdown-toggle {
-     -webkit-border-top-right-radius: 6px;
-         -moz-border-radius-topright: 6px;
-             border-top-right-radius: 6px;
-  -webkit-border-bottom-right-radius: 6px;
-      -moz-border-radius-bottomright: 6px;
-          border-bottom-right-radius: 6px;
+     -webkit-border-top-right-radius: 500px;
+         -moz-border-radius-topright: 500px;
+             border-top-right-radius: 500px;
+  -webkit-border-bottom-right-radius: 500px;
+      -moz-border-radius-bottomright: 500px;
+          border-bottom-right-radius: 500px;
 }
 
 // On hover/focus/active, bring the proper btn to front
@@ -111,22 +111,20 @@
   outline: 0;
 }
 
-
-
 // Split button dropdowns
 // ----------------------
 
 // Give the line between buttons some depth
 .btn-group > .btn + .dropdown-toggle {
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 5px;
+  padding-right: 23px;
   .box-shadow(~"inset 1px 0 0 rgba(255,255,255,.125), inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");
   *padding-top: 5px;
   *padding-bottom: 5px;
 }
 .btn-group > .btn-mini + .dropdown-toggle {
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 23px;
   *padding-top: 2px;
   *padding-bottom: 2px;
 }
@@ -135,8 +133,8 @@
   *padding-bottom: 4px;
 }
 .btn-group > .btn-large + .dropdown-toggle {
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 0;
+  padding-right: 18px;
   *padding-top: 7px;
   *padding-bottom: 7px;
 }
@@ -172,14 +170,29 @@
   .btn-inverse.dropdown-toggle {
     background-color: @btnInverseBackgroundHighlight;
   }
+  .btn-link.dropdown-toggle {
+    background-color: @btnLinkBackgroundHighlight;
+    box-shadow: none;
+  }
+  .btn-white.dropdown-toggle {
+    background-color: @btnWhiteBackgroundHighlight;
+  }
+  .btn-blue.dropdown-toggle {
+    background-color: @btnBlueBackgroundHighlight;
+  }
+  .btn-green.dropdown-toggle {
+    background-color: @btnGreenBackgroundHighlight;
+  }
 }
 
 
-// Reposition the caret
-.btn .caret {
-  margin-top: 8px;
-  margin-left: 0;
+// Reposition the icon
+.btn i {
+  left: 8px;
+  position: relative;
+  top: 1px;
 }
+
 // Carets in other button sizes
 .btn-mini .caret,
 .btn-small .caret,

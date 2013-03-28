@@ -39,6 +39,7 @@
 // The dropdown menu (ul)
 // ----------------------
 .dropdown-menu {
+  font-size: 14px !important;
   position: absolute;
   top: 100%;
   left: 0;
@@ -74,11 +75,11 @@
   // Links within the dropdown menu
   a {
     display: block;
-    padding: 3px 20px;
+    padding: 3px 20px 3px 15px;
     clear: both;
     font-weight: normal;
     line-height: @baseLineHeight;
-    color: @dropdownLinkColor;
+    color: @grayLight;
     white-space: nowrap;
   }
 }
@@ -89,9 +90,9 @@
 .dropdown-menu li > a:focus,
 .dropdown-submenu:hover > a {
   text-decoration: none;
-  color: @dropdownLinkColorHover;
-  background-color: @dropdownLinkBackgroundHover;
-  #gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
+  color: #33ccff;
+  background-color: @white;
+  //#gradient > .vertical(@dropdownLinkBackgroundHover, darken(@dropdownLinkBackgroundHover, 5%));
 }
 
 // Active state
@@ -164,14 +165,13 @@
   position: relative;
 }
 .dropdown-submenu > .dropdown-menu {
-  top: 0;
+  top: -6px;
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
-  -webkit-border-radius: 0 6px 6px 6px;
-     -moz-border-radius: 0 6px 6px 6px;
-          border-radius: 0 6px 6px 6px;
+  .border-radius(6px);
 }
+
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
 }
