@@ -4,18 +4,21 @@
 
 
 .breadcrumb {
+  font-family: @fontBariol;
   padding: 8px 15px;
   margin: 0 0 @baseLineHeight;
   list-style: none;
-  background-color: #f5f5f5;
-  .border-radius(4px);
+  color: @gray;
+  a {
+    color:#999;
+  }
   li {
     display: inline-block;
     .ie7-inline-block();
     text-shadow: 0 1px 0 @white;
   }
   .divider {
-    padding: 0 5px;
+    padding: 0;
     color: #ccc;
   }
   .active {
