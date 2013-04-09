@@ -1468,7 +1468,7 @@
             <h2>{{_i}}Buttons{{/i}}</h2>
           </div>
 
-          <h3>Default buttons</h3>
+          <h3>{{_i}}Default buttons{{/i}}</h3>
           <p>{{_i}}Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.{{/i}}</p>
           <table class="table table-bordered table-striped">
             <thead>
@@ -1536,6 +1536,51 @@
               </tr>
             </tbody>
           </table>
+
+
+
+
+          <h3>{{_i}}Player buttons{{/i}}</h3>
+          <p>{{_i}}Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.{{/i}}</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>{{_i}}Button{{/i}}</th>
+                <th>{{_i}}class=""{{/i}}</th>
+                <th>{{_i}}Description{{/i}}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn btn-player"><i class="icon-refresh"></i> {{_i}}Rotate{{/i}}</button></td>
+                <td><code>btn btn-player</code></td>
+                <td>{{_i}}Rotate button{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-player"><i class="icon-fullscreen"></i> {{_i}}Restore size{{/i}}</button></td>
+                <td><code>btn btn-player</code></td>
+                <td>{{_i}}Restore size button{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-player"><i class="icon-fullscreen"></i> {{_i}}Background color{{/i}}</button></td>
+                <td><code>btn btn-player</code></td>
+                <td>{{_i}}Background color button{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-player"><i class="icon-plus"></i> {{_i}}More images{{/i}}</button></td>
+                <td><code>btn btn-player</code></td>
+                <td>{{_i}}Add more images button{{/i}}</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-player"><i class="icon-trash"></i> {{_i}}Exclude images{{/i}}</button></td>
+                <td><code>btn btn-player</code></td>
+                <td>{{_i}}Exclude images button{{/i}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+
 
           <h4>{{_i}}Cross browser compatibility{{/i}}</h4>
           <p>{{_i}}IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.{{/i}}</p>

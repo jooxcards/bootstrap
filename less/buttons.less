@@ -246,6 +246,7 @@ input[type="submit"].btn {
   background-color: transparent;
 }
 
+
 // Make a button without shadows, clean and white
 .btn-white,
 .btn-white:active {
@@ -260,6 +261,72 @@ input[type="submit"].btn {
   .border-radius(@inputBorderRadius);
 }
 .btn-white:hover {
+  color: @gray;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+// Player buttons
+// --------------------------------------------------
+
+
+// Player button
+.btn-player {
+  font-family:@sansFontFamily;
+  color: @grayDark;
+  font-size: @baseFontSize;
+  .box-shadow(~"0 2px 0 #A6A19D");
+  cursor: pointer;
+  padding: 5px 15px;
+}
+.btn-player:active {
+  position: relative;
+  top: 1px;
+  .box-shadow(none);  
+}
+
+.btn-player:hover {
+  color: @grayDark;
+  text-decoration: none;
+}
+
+.btn-player i {
+  margin-right: @baseLineHeight - 15;
+}
+
+// Add images button
+.btn-add-images,
+.btn-add-images:active {
+  background-color: @white;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-add-images {
+  border-color: #e8e8e8;
+  cursor: pointer;
+  color: @grayLight;
+  .border-radius(@inputBorderRadius);
+}
+.btn-add-images:hover {
+  color: @gray;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+// Exclude images button
+.btn-exclude,
+.btn-exclude:active {
+  background-color: @white;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-exclude {
+  border-color: #e8e8e8;
+  cursor: pointer;
+  color: @grayLight;
+  .border-radius(@inputBorderRadius);
+}
+.btn-exclude:hover {
   color: @gray;
   text-decoration: none;
   background-color: #f5f5f5;
