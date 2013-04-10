@@ -269,8 +269,6 @@ input[type="submit"].btn {
 // Player buttons
 // --------------------------------------------------
 
-
-// Player button
 .btn-player {
   font-family:@sansFontFamily;
   color: @grayDark;
@@ -284,50 +282,18 @@ input[type="submit"].btn {
   top: 1px;
   .box-shadow(none);  
 }
-
 .btn-player:hover {
-  color: @grayDark;
   text-decoration: none;
 }
-
 .btn-player i {
   margin-right: @baseLineHeight - 15;
 }
-
 // Add images button
 .btn-add-images,
-.btn-add-images:active {
-  background-color: @white;
-  background-image: none;
-  .box-shadow(none);
-}
-.btn-add-images {
-  border-color: #e8e8e8;
-  cursor: pointer;
-  color: @grayLight;
-  .border-radius(@inputBorderRadius);
-}
-.btn-add-images:hover {
-  color: @gray;
-  text-decoration: none;
-  background-color: #f5f5f5;
-}
-
-// Exclude images button
+.btn-add-images:active,
+.btn-add-images:hover,
 .btn-exclude,
-.btn-exclude:active {
-  background-color: @white;
-  background-image: none;
-  .box-shadow(none);
-}
-.btn-exclude {
-  border-color: #e8e8e8;
-  cursor: pointer;
-  color: @grayLight;
-  .border-radius(@inputBorderRadius);
-}
+.btn-exclude:active,
 .btn-exclude:hover {
-  color: @gray;
-  text-decoration: none;
-  background-color: #f5f5f5;
+  color: @white;
 }

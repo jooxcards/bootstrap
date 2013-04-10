@@ -4479,7 +4479,6 @@ input[type="submit"].btn.btn-mini {
 }
 
 .btn-player:hover {
-  color: #333333;
   text-decoration: none;
 }
 
@@ -4488,51 +4487,12 @@ input[type="submit"].btn.btn-mini {
 }
 
 .btn-add-images,
-.btn-add-images:active {
-  background-color: #ffffff;
-  background-image: none;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-}
-
-.btn-add-images {
-  color: #666666;
-  cursor: pointer;
-  border-color: #e8e8e8;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-}
-
-.btn-add-images:hover {
-  color: #555555;
-  text-decoration: none;
-  background-color: #f5f5f5;
-}
-
+.btn-add-images:active,
+.btn-add-images:hover,
 .btn-exclude,
-.btn-exclude:active {
-  background-color: #ffffff;
-  background-image: none;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-}
-
-.btn-exclude {
-  color: #666666;
-  cursor: pointer;
-  border-color: #e8e8e8;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-}
-
+.btn-exclude:active,
 .btn-exclude:hover {
-  color: #555555;
-  text-decoration: none;
-  background-color: #f5f5f5;
+  color: #ffffff;
 }
 
 .btn-group {
