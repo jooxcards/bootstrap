@@ -2063,17 +2063,6 @@ h6 {
   text-rendering: optimizelegibility;
 }
 
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small {
-  font-weight: normal;
-  line-height: 1;
-  color: #666666;
-}
-
 h1 {
   font-size: 66px;
   line-height: 70px;
@@ -2104,26 +2093,18 @@ h6 {
   line-height: 20px;
 }
 
-h1 small {
-  font-size: 24px;
-}
-
-h2 small {
-  font-size: 18px;
-}
-
-h3 small {
-  font-size: 14px;
-}
-
-h4 small {
-  font-size: 14px;
-}
-
 .page-header {
   padding-bottom: 9px;
   margin: 20px 0 30px;
   border-bottom: 1px solid #eeeeee;
+}
+
+.byline {
+  font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #777;
 }
 
 ul,
@@ -6466,26 +6447,14 @@ button.dropdown-toggle i {
 
 .thumbnail {
   display: block;
-  padding: 4px;
   line-height: 20px;
-  border: 1px solid #ddd;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.055);
-  -webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
+  /*   .transition(all .2s ease-in-out); */
+
 }
 
 a.thumbnail:hover {
-  border-color: #0066ff;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
-          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  /*   .box-shadow(0 1px 4px rgba(0,105,214,.25)); */
+
 }
 
 .thumbnail > img {
