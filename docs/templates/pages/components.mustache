@@ -2186,62 +2186,110 @@
 
           <h3>{{_i}}Mosaic{{/i}}</h3>
           <p>{{_i}}Explore all your options with the various grid classes available to you. You can also mix and match different sizes.{{/i}}</p>
-          <ul class="thumbnails">
-            <li class="span8">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/250x250" alt="">
-              </a>
+          
+          <div class="mosaic">
+            <ul class="thumbnails span8 pull-left">
+            
               
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/185x200" alt="">
-              </a>
-              
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/160x120" alt="">
-              </a>
-              
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/260x120" alt="">
-              </a>
-              
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/160x120" alt="">
-              </a>
-              
-            </li>
-          </ul>
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/250x250" alt="">
+                </a>
+              </li>
 
+
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/160x120" alt="">
+                </a>
+              </li>
+              
+              
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/185x200" alt="">
+                </a>
+              </li>
+                
+                
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/160x120" alt="">
+                </a>
+              </li>
+                
+                
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/260x120" alt="">
+                </a>
+              </li>
+              
+              
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/185x200" alt="">
+                </a>
+              </li>
+
+
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/250x250" alt="">
+                </a>
+              </li>
+
+
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/160x120" alt="">
+                </a>
+              </li>
+
+                
+                
+              <li>
+                <a href="#" class="thumbnail">
+                  <img src="http://placehold.it/160x120" alt="">
+                </a>
+              </li>
+                
+            </ul>
+          </div>
+          
+          
+          
         </section>
-
 
 
         <!-- Alerts
         ================================================== -->
         <section id="alerts">
           <div class="page-header">
-            <h1>{{_i}}Alerts{{/i}} <small>{{_i}}Styles for success, warning, and error messages{{/i}}</small></h1>
+            <h1>{{_i}}Alerts{{/i}}</h1>
+            <p class="byline">{{_i}}Styles for success, warning, and error messages{{/i}}</p>
           </div>
 
-          <h2>{{_i}}Default alert{{/i}}</h2>
+          <h3>{{_i}}Default alert{{/i}}</h3>
           <p>{{_i}}Wrap any text and an optional dismiss button in <code>.alert</code> for a basic warning alert message.{{/i}}</p>
           <div class="bs-docs-example">
             <div class="alert">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
               <strong>{{_i}}Warning!{{/i}}</strong> {{_i}}Best check yo self, you're not looking too good.{{/i}}
             </div>
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;
   &lt;strong&gt;{{_i}}Warning!{{/i}}&lt;/strong&gt; {{_i}}Best check yo self, you're not looking too good.{{/i}}
 &lt;/div&gt;
 </pre>
 
           <h3>{{_i}}Dismiss buttons{{/i}}</h3>
           <p>{{_i}}Mobile Safari and Mobile Opera browsers, in addition to the <code>data-dismiss="alert"</code> attribute, require an <code>href="#"</code> for the dismissal of alerts when using an <code>&lt;a&gt;</code> tag.{{/i}}</p>
-          <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&times;&lt;/a&gt;</pre>
+          <pre class="prettyprint linenums">&lt;a href="#" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
           <p>{{_i}}Alternatively, you may use a <code>&lt;button&gt;</code> element with the data attribute, which we have opted to do for our docs. When using <code>&lt;button&gt;</code>, you must include <code>type="button"</code> or your forms may not submit.{{/i}}</p>
-          <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;</pre>
+          <pre class="prettyprint linenums">&lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;</pre>
 
           <h3>{{_i}}Dismiss alerts via javascript{{/i}}</h3>
           <p>{{_i}}Use the <a href="./javascript.html#alerts">alerts jQuery plugin</a> for quick and easy dismissal of alerts.{{/i}}</p>
@@ -2252,16 +2300,77 @@
 
           <h2>{{_i}}Options{{/i}}</h2>
           <p>{{_i}}For longer messages, increase the padding on the top and bottom of the alert wrapper by adding <code>.alert-block</code>.{{/i}}</p>
+          
+          
+          
+          <h4>{{_i}}Warning or attention{{/i}}</h4>
           <div class="bs-docs-example">
             <div class="alert alert-block">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+              <i class="icon-warning-sign big pull-left"></i>
               <h4>{{_i}}Warning!{{/i}}</h4>
               <p>{{_i}}Best check yo self, you're not looking too good.{{/i}} Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
             </div>
           </div>
 <pre class="prettyprint linenums">
 &lt;div class="alert alert-block"&gt;
-  &lt;button type="button" class="close" data-dismiss="alert"&gt;&times;&lt;/button&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;h4&gt;{{_i}}Warning!{{/i}}&lt;/h4&gt;
+  {{_i}}Best check yo self, you're not...{{/i}}
+&lt;/div&gt;
+</pre>
+
+
+
+          <h4>{{_i}}Error or danger{{/i}}</h4>
+          <div class="bs-docs-example">
+            <div class="alert alert-block alert-error">
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+              <i class="icon-remove-circle big pull-left"></i>
+              <h4>{{_i}}Oh snap!{{/i}}</h4>
+              <p>{{_i}}Change a few things up and try submitting again.{{/i}} Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;h4&gt;{{_i}}Warning!{{/i}}&lt;/h4&gt;
+  {{_i}}Best check yo self, you're not...{{/i}}
+&lt;/div&gt;
+</pre>
+
+
+
+          <h4>{{_i}}Success{{/i}}</h4>
+          <div class="bs-docs-example">
+            <div class="alert alert-block alert-success">
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+              <i class="icon-thumbs-up big pull-left"></i>
+              <h4>{{_i}}Well done!{{/i}}</h4>
+              <p>{{_i}}You successfully read this important alert message.{{/i}} Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;h4&gt;{{_i}}Warning!{{/i}}&lt;/h4&gt;
+  {{_i}}Best check yo self, you're not...{{/i}}
+&lt;/div&gt;
+</pre>
+
+
+          <h4>{{_i}}Information{{/i}}</h4>
+          <div class="bs-docs-example">
+            <div class="alert alert-block alert-info">
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
+              <i class="icon-info-sign big pull-left"></i>
+              <h4>{{_i}}Heads up!{{/i}}</h4>
+              <p>{{_i}}This alert needs your attention, but it's not super important.{{/i}} Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="alert alert-block"&gt;
+  &lt;button type="button" class="close" data-dismiss="alert"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/button&gt;
   &lt;h4&gt;{{_i}}Warning!{{/i}}&lt;/h4&gt;
   {{_i}}Best check yo self, you're not...{{/i}}
 &lt;/div&gt;
@@ -2271,13 +2380,13 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Contextual alternatives{{/i}}</h2>
+          <h3>{{_i}}Contextual alternatives{{/i}}</h3>
           <p>{{_i}}Add optional classes to change an alert's connotation.{{/i}}</p>
 
-          <h3>{{_i}}Error or danger{{/i}}</h3>
+          <h4>{{_i}}Error or danger{{/i}}</h4>
           <div class="bs-docs-example">
             <div class="alert alert-error">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
               <strong>{{_i}}Oh snap!{{/i}}</strong> {{_i}}Change a few things up and try submitting again.{{/i}}
             </div>
           </div>
@@ -2287,10 +2396,10 @@
 &lt;/div&gt;
 </pre>
 
-          <h3>{{_i}}Success{{/i}}</h3>
+          <h4>{{_i}}Success{{/i}}</h4>
           <div class="bs-docs-example">
             <div class="alert alert-success">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
               <strong>{{_i}}Well done!{{/i}}</strong> {{_i}}You successfully read this important alert message.{{/i}}
             </div>
           </div>
@@ -2300,10 +2409,10 @@
 &lt;/div&gt;
 </pre>
 
-          <h3>{{_i}}Information{{/i}}</h3>
+          <h4>{{_i}}Information{{/i}}</h4>
           <div class="bs-docs-example">
             <div class="alert alert-info">
-              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
               <strong>{{_i}}Heads up!{{/i}}</strong> {{_i}}This alert needs your attention, but it's not super important.{{/i}}
             </div>
           </div>
@@ -2321,10 +2430,9 @@
         ================================================== -->
         <section id="progress">
           <div class="page-header">
-            <h1>{{_i}}Progress bars{{/i}} <small>{{_i}}For loading, redirecting, or action status{{/i}}</small></h1>
+            <h2>{{_i}}Progress bars{{/i}}</h2>
+            <p class="byline">{{_i}}For loading, redirecting, or action status{{/i}}</p>
           </div>
-
-          <h2>{{_i}}Examples and markup{{/i}}</h2>
 
           <h3>{{_i}}Basic{{/i}}</h3>
           <p>{{_i}}Default progress bar with a vertical gradient.{{/i}}</p>
@@ -2454,7 +2562,7 @@
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Browser support{{/i}}</h2>
+          <h3>{{_i}}Browser support{{/i}}</h3>
           <p>{{_i}}Progress bars use CSS3 gradients, transitions, and animations to achieve all their effects. These features are not supported in IE7-9 or older versions of Firefox.{{/i}}</p>
           <p>{{_i}}Versions earlier than Internet Explorer 10 and Opera 12 do not support animations.{{/i}}</p>
 
@@ -2468,10 +2576,11 @@
         ================================================== -->
         <section id="misc">
           <div class="page-header">
-            <h1>{{_i}}Miscellaneous{{/i}} <small>{{_i}}Lightweight utility components{{/i}}</small></h1>
+            <h2>{{_i}}Miscellaneous{{/i}}</h2>
+            <p class="byline">{{_i}}Lightweight utility components{{/i}}</small>
           </div>
 
-          <h2>{{_i}}Wells{{/i}}</h2>
+          <h3>{{_i}}Wells{{/i}}</h3>
           <p>{{_i}}Use the well as a simple effect on an element to give it an inset effect.{{/i}}</p>
           <div class="bs-docs-example">
             <div class="well">
@@ -2483,7 +2592,7 @@
   ...
 &lt;/div&gt;
 </pre>
-          <h3>{{_i}}Optional classes{{/i}}</h3>
+          <h4>{{_i}}Optional classes{{/i}}</h4>
           <p>{{_i}}Control padding and rounded corners with two optional modifier classes.{{/i}}</p>
           <div class="bs-docs-example">
             <div class="well well-large">
@@ -2506,16 +2615,16 @@
 &lt;/div&gt;
 </pre>
 
-          <h2>{{_i}}Close icon{{/i}}</h2>
+          <h3>{{_i}}Close icon{{/i}}</h3>
           <p>{{_i}}Use the generic close icon for dismissing content like modals and alerts.{{/i}}</p>
           <div class="bs-docs-example">
-            <p><button class="close" style="float: none;">&times;</button></p>
+            <p><button class="close" style="float: none;"><i class="icon-remove"></i></button></p>
           </div>
           <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
           <p>{{_i}}iOS devices require an href="#" for click events if you rather use an anchor.{{/i}}</p>
           <pre class="prettyprint linenums">&lt;a class="close" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
 
-          <h2>{{_i}}Helper classes{{/i}}</h2>
+          <h3>{{_i}}Helper classes{{/i}}</h3>
           <p>{{_i}}Simple, focused classes for small display or behavior tweaks.{{/i}}</p>
 
           <h4>{{_i}}.pull-left{{/i}}</h4>

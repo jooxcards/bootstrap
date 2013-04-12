@@ -3851,8 +3851,8 @@ ul.icons li [class*=" icon-"] {
 
 .close {
   float: right;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: normal;
   line-height: 20px;
   color: #000000;
   text-shadow: 0 1px 0 #ffffff;
@@ -4770,9 +4770,18 @@ button.dropdown-toggle i {
 
 .alert .close {
   position: relative;
-  top: -2px;
-  right: -21px;
+  top: 0;
+  right: -25px;
   line-height: 20px;
+}
+
+.alert i.big {
+  padding-top: 2px;
+  padding-left: 5px;
+  font-size: 70px;
+  vertical-align: middle;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 
 .alert-success {
@@ -4806,6 +4815,13 @@ button.dropdown-toggle i {
 
 .alert-block p + p {
   margin-top: 5px;
+}
+
+.alert-block .close {
+  position: relative;
+  top: -9px;
+  right: -27px;
+  line-height: 20px;
 }
 
 .nav {
@@ -6448,14 +6464,20 @@ button.dropdown-toggle i {
 .thumbnail {
   display: block;
   line-height: 20px;
-  /*   .transition(all .2s ease-in-out); */
-
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
 }
 
+/*
 a.thumbnail:hover {
-  /*   .box-shadow(0 1px 4px rgba(0,105,214,.25)); */
-
+  .box-shadow(2px 2px 8px rgba(50, 50, 50, 1));
+   margin:-3px !important;
+   border:3px solid #FFFFFF;
+   .opacity(10);
 }
+*/
 
 .thumbnail > img {
   display: block;
@@ -6500,6 +6522,63 @@ a.inner-border:hover span {
      -moz-border-radius: 3px;
           border-radius: 3px;
   opacity: 1;
+}
+
+.mosaic .thumbnails {
+  margin-left: -20px;
+  list-style: none;
+  *zoom: 1;
+}
+
+.mosaic .thumbnails:before,
+.mosaic .thumbnails:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.mosaic .thumbnails:after {
+  clear: both;
+}
+
+.mosaic .row-fluid .thumbnails {
+  margin-left: 0;
+}
+
+.mosaic .thumbnails > li {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.mosaic .thumbnail {
+  display: block;
+  line-height: 20px;
+  border: 3px solid #ffffff;
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+.mosaic a.thumbnail:hover {
+  margin: -3px !important;
+  border: 3px solid #FFFFFF;
+  -webkit-box-shadow: 2px 2px 8px #323232;
+     -moz-box-shadow: 2px 2px 8px #323232;
+          box-shadow: 2px 2px 8px #323232;
+}
+
+.mosaic .thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mosaic .thumbnail .caption {
+  padding: 9px;
+  color: #555555;
 }
 
 .label,
