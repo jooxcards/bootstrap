@@ -6524,21 +6524,64 @@ a.inner-border:hover span {
   opacity: 1;
 }
 
-.mosaic .thumbnails {
-  margin-left: -20px;
-  list-style: none;
-  *zoom: 1;
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
 }
 
-.mosaic .thumbnails:before,
-.mosaic .thumbnails:after {
-  display: table;
-  line-height: 0;
-  content: "";
+.isotope-hidden.isotope-item {
+  z-index: 1;
+  pointer-events: none;
 }
 
-.mosaic .thumbnails:after {
-  clear: both;
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property: -moz-transform, opacity;
+      -ms-transition-property: -ms-transform, opacity;
+       -o-transition-property: -o-transform, opacity;
+          transition-property: transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.mosaic .element img {
+  width: auto;
+  height: auto;
+}
+
+.mosaic .element.large img {
+  width: 500px;
+  height: 300px;
 }
 
 .mosaic .row-fluid .thumbnails {
@@ -6554,7 +6597,6 @@ a.inner-border:hover span {
 .mosaic .thumbnail {
   display: block;
   line-height: 20px;
-  border: 3px solid #ffffff;
   -webkit-transition: all 0.2s ease-in-out;
      -moz-transition: all 0.2s ease-in-out;
        -o-transition: all 0.2s ease-in-out;
@@ -6562,11 +6604,8 @@ a.inner-border:hover span {
 }
 
 .mosaic a.thumbnail:hover {
-  margin: -3px !important;
-  border: 3px solid #FFFFFF;
-  -webkit-box-shadow: 2px 2px 8px #323232;
-     -moz-box-shadow: 2px 2px 8px #323232;
-          box-shadow: 2px 2px 8px #323232;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
 }
 
 .mosaic .thumbnail > img {
