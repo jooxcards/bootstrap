@@ -6574,6 +6574,15 @@ a.inner-border:hover span {
           transition-duration: 0s;
 }
 
+.mosaic {
+  overflow: visible !important;
+  background-color: #ffffff;
+}
+
+.mosaic .element {
+  margin: 5px;
+}
+
 .mosaic .element img {
   width: auto;
   height: auto;
@@ -6582,16 +6591,6 @@ a.inner-border:hover span {
 .mosaic .element.large img {
   width: 500px;
   height: 300px;
-}
-
-.mosaic .row-fluid .thumbnails {
-  margin-left: 0;
-}
-
-.mosaic .thumbnails > li {
-  float: left;
-  margin-bottom: 0;
-  margin-left: 0;
 }
 
 .mosaic .thumbnail {
@@ -6613,11 +6612,6 @@ a.inner-border:hover span {
   max-width: 100%;
   margin-right: auto;
   margin-left: auto;
-}
-
-.mosaic .thumbnail .caption {
-  padding: 9px;
-  color: #555555;
 }
 
 .label,

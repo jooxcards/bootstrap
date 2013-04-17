@@ -52,7 +52,13 @@
     }
 
 .mosaic {
+  background-color: @white; 
+  overflow: visible !important;
 
+  .element {
+    margin: 5px;
+  }
+  
   .element img {
     width: auto;
     height: auto;
@@ -62,32 +68,18 @@
     width: 500px;
     height: 300px;
   }
-  
-// Fluid rows have no left margin
-  .row-fluid .thumbnails {
-    margin-left: 0;
-  }
-  
-// Float li to make thumbnails appear in a row
-  .thumbnails > li {
-    float: left; // Explicity set the float since we don't require .span* classes
-    margin-bottom: 0;
-    margin-left: 0;
-  }
-  
+    
 // The actual thumbnail (can be `a` or `div`)
   .thumbnail {
     display: block;
     line-height: @baseLineHeight;
     .transition(all .2s ease-in-out);
-    //border: 3px solid @white;
   }
   
 // Add a hover state for linked versions only
   a.thumbnail:hover {
     //.box-shadow(2px 2px 8px rgba(50, 50, 50, 1));
     //margin:-3px !important;
-    //border:3px solid #FFFFFF;
      .opacity(70);
   }
   
@@ -98,10 +90,5 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .thumbnail .caption {
-    padding: 9px;
-    color: @gray;
-  }
-
 }
 
