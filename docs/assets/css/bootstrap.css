@@ -6524,15 +6524,58 @@ a.inner-border:hover span {
   opacity: 1;
 }
 
-/**** Isotope Filtering ****/
-
-.isotope-item {
-  z-index: 2;
+#mosaic {
+  width: 630px !important;
+  padding: 0;
+  margin-left: 30px;
+  list-style: none;
+  background-color: #ffffff;
 }
 
-.isotope-hidden.isotope-item {
-  z-index: 1;
-  pointer-events: none;
+#mosaic .item {
+  float: left;
+  margin: 1px;
+}
+
+#mosaic .item img {
+  width: auto;
+  height: auto;
+}
+
+#mosaic .item.large img {
+  width: 400px;
+  height: auto;
+}
+
+#mosaic .row-fluid .thumbnails {
+  margin-left: 0;
+}
+
+#mosaic .thumbnails > li {
+  float: left;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+#mosaic .thumbnail {
+  display: block;
+  line-height: 20px;
+  -webkit-transition: all 0.2s ease-in-out;
+     -moz-transition: all 0.2s ease-in-out;
+       -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out;
+}
+
+#mosaic a.thumbnail:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+#mosaic .thumbnail > img {
+  display: block;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 /**** Isotope CSS3 transitions ****/
@@ -6572,46 +6615,6 @@ a.inner-border:hover span {
       -ms-transition-duration: 0s;
        -o-transition-duration: 0s;
           transition-duration: 0s;
-}
-
-.mosaic {
-  overflow: visible !important;
-  background-color: #ffffff;
-}
-
-.mosaic .element {
-  margin: 5px;
-}
-
-.mosaic .element img {
-  width: auto;
-  height: auto;
-}
-
-.mosaic .element.large img {
-  width: 500px;
-  height: 300px;
-}
-
-.mosaic .thumbnail {
-  display: block;
-  line-height: 20px;
-  -webkit-transition: all 0.2s ease-in-out;
-     -moz-transition: all 0.2s ease-in-out;
-       -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out;
-}
-
-.mosaic a.thumbnail:hover {
-  opacity: 0.7;
-  filter: alpha(opacity=70);
-}
-
-.mosaic .thumbnail > img {
-  display: block;
-  max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .label,

@@ -2264,68 +2264,96 @@
           <h3>Mosaic</h3>
           <p>Explore all your options with the various grid classes available to you. You can also mix and match different sizes.</p>
           
-          <div class="row-fluid mosaic span8">
-              
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/250x250" alt="">
-                </a>
-              </div>
-
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/150x120" alt="">
-                </a>
-              </div>
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/150x120" alt="">
-                </a>
-              </div>
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/150x120" alt="">
-                </a>
-              </div>
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/150x120" alt="">
-                </a>
-              </div>
-              
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/200x200" alt="">
-                </a>
-              </div>
-
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/200x200" alt="">
-                </a>
-              </div>
-
-
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/250x250" alt="">
-                </a>
-              </div>
-
-
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/150x250" alt="">
-                </a>
-              </div>
-
+          <div class="row-fluid thumbnails">
+          
+            <ul id="mosaic">
+  
+                <li class="item large">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+  
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/225x150" alt="">
+                  </a>
+                </li>
                 
-              <div class="element">
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/150x250" alt="">
-                </a>
-              </div>
                 
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                
+                
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                
+                
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+  
+  
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                
+                
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                
+                
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                
+                
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                  
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                  
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                  
+                <li class="item">
+                  <a href="#" class="thumbnail">
+                    <img src="http://placehold.it/150x150" alt="">
+                  </a>
+                </li>
+                  
+            </ul>
           </div>
           
         </section>
@@ -2805,44 +2833,54 @@ class="clearfix"
 <script>
   $(function(){
     
-    var $container = $('.mosaic');
-    
-    
-    // add randomish size classes
-    $container.find('.element').each(function(){
-      var $this = $(this),
-          number = parseInt( $this.find('.number').text(), 10 );
-      if ( number % 7 % 2 === 1 ) {
-        $this.addClass('width2');
-      }
-      if ( number % 3 === 0 ) {
-        $this.addClass('height2');
-      }
-    });
+    var $container = $('#mosaic'),
+        $body = $('body'),
+        $items = $('.item'),
+        colW = 1,
+        columns = null;
     
     $container.isotope({
-      itemSelector: '.element',
-      masonry : {
-        columnWidth : 5
+      // disable window resizing
+      resizable: false,
+      masonry: {
+        columnWidth: colW
       }
     });
     
-    // change size of clicked element
-    $container.delegate( '.element', 'click', function(){
-      $(this).toggleClass('large');
-      $container.isotope('reLayout');
-    });
-
-    // toggle variable sizes of all elements
-    $('#toggle-sizes').find('a').click(function(){
+    $(window).smartresize(function(){
+      // check if columns has changed
+      var currentColumns = Math.floor( ( $body.width() -10 ) / colW );
+      if ( currentColumns !== columns ) {
+        // set new column count
+        columns = currentColumns;
+        // apply width to container manually, then trigger relayout
+        $container.width( columns * colW )
+          .isotope('reLayout');
+      }
+      
+    }).smartresize(); // trigger resize to set container width
+  
+    $items.click(function(){
+      var $this = $(this);
+      // nothing to change if this already has large class
+      if ( $this.hasClass('large') ) {
+        return;
+      }
+      var $previousLargeItem = $items.filter('.large');
+      
+      $previousLargeItem.removeClass('large');
+      $this.addClass('large');
       $container
-        .toggleClass('variable-sizes')
-        .isotope('reLayout');
-      return false;
+        // update sort data on changed items
+        .isotope('updateSortData', $this )
+        .isotope('updateSortData', $previousLargeItem )
+        // trigger layout and sort
+        .isotope();
     });
-
-    
-  });
+  
+      
+      
+});
 </script>
 
 
