@@ -6528,13 +6528,27 @@ a.inner-border:hover span {
   width: 630px !important;
   padding: 0;
   margin-left: 30px;
-  list-style: none;
   background-color: #ffffff;
 }
 
 #mosaic .item {
   float: left;
+  min-width: 150px;
+  min-height: 150px;
   margin: 1px;
+  background: #CCC;
+}
+
+#mosaic .item.w2 {
+  width: 150px;
+}
+
+#mosaic .item.h2 {
+  height: 150px;
+}
+
+#mosaic .item.h3 {
+  width: 250px;
 }
 
 #mosaic .item img {
@@ -6542,19 +6556,13 @@ a.inner-border:hover span {
   height: auto;
 }
 
-#mosaic .item.large img {
-  width: 400px;
+#mosaic .item.large {
+  width: 628px;
   height: auto;
 }
 
-#mosaic .row-fluid .thumbnails {
-  margin-left: 0;
-}
-
-#mosaic .thumbnails > li {
-  float: left;
-  margin-bottom: 0;
-  margin-left: 0;
+#mosaic .item:hover {
+  cursor: pointer;
 }
 
 #mosaic .thumbnail {
