@@ -2,40 +2,32 @@
 // Mosaic
 // --------------------------------------------------
 
+
+
 #mosaic {
   padding: 0;
   margin-left: 30px;
-  background-color: @white; 
-  list-style: none;
   width: 630px !important;
+  background-color: @white; 
 
   .item {
     float: left;
+    background: #CCC;
     margin: 1px;
+    min-width: 150px;
+    min-height: 150px;
   }
+ 
+  .item.w2 { width: 150px; }
+  .item.h2 { height: 150px; }
+  .item.h3 { width: 250px; }
+  .item img { width: auto; height: auto; }
   
-  .item img {
-    width: auto;
-    height: auto;
-  }
-  
-  .item.large img {
-    width: 400px;
-    height: auto;
-  }
+  .item.large { width: 628px; height: auto}
+  //.item.large.w1.h1 { width: 250px; height: 250px; }
+  .item:hover {cursor:pointer;}
 
-// Fluid rows have no left margin
-  .row-fluid .thumbnails {
-    margin-left: 0;
-  }
-  
-// Float li to make thumbnails appear in a row
-  .thumbnails > li {
-    float: left; // Explicity set the float since we don't require .span* classes
-    margin-bottom: 0;
-    margin-left: 0;
-  }
-    
+
 // The actual thumbnail (can be `a` or `div`)
   .thumbnail {
     display: block;
