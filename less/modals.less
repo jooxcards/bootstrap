@@ -20,7 +20,7 @@
   bottom: 0;
   left: 0;
   z-index: @zindexModalBackdrop;
-  background-color: @black;
+  background-color: @white;
   // Fade for backdrop
   &.fade { opacity: 0; }
 }
@@ -32,44 +32,83 @@
 
 // Base modal
 .modal {
+  font-family: @fontBariol;
   position: fixed;
   top: 50%;
   left: 50%;
   z-index: @zindexModal;
-  overflow: auto;
-  width: 560px;
+  overflow: visible;
+  width: 630px;
   margin: -250px 0 0 -280px;
   background-color: @white;
   border: 1px solid #999;
   border: 1px solid rgba(0,0,0,.3);
   *border: 1px solid #999; /* IE6-7 */
   .border-radius(6px);
-  .box-shadow(0 3px 7px rgba(0,0,0,0.3));
+  .box-shadow(0 0 7px rgba(0, 0, 0, 0.5));
   .background-clip(padding-box);
   &.fade {
     .transition(e('opacity .3s linear, top .3s ease-out'));
     top: -25%;
   }
   &.fade.in { top: 50%; }
-}
-.modal-header {
-  padding: 9px 15px;
-  border-bottom: 1px solid #eee;
+
   // Close icon
-  .close { margin-top: 2px; }
+  .close {
+    font-size: 36px;
+    text-align: center;
+    color: @white;
+  	background-color:@grayLight;    
+  	display:block;
+  	width:32px;
+  	height:32px;
+  	margin-top:-16px;
+  	margin-right:-16px;
+  	opacity:1;
+  	.border-radius(500px);
+ 		.transition(opacity 0.4s ease-in-out);  		
+ 	
+ 	:hover {opacity: 0.9;}
+ 	}
+
+
+}
+
+.modal-header {
+  color:@grayLight;
+  padding: 30px;
+  // Title of modal
+  .modal-title {
+    margin-left: 30px;
+    width: 80%;
+  }  
   // Heading
   h3 {
     margin: 0;
     line-height: 30px;
+    font-size: @baseLineHeight + 10;
+  }
+  p {
+  	font-size:@baseFontSize;
+  	line-height:normal;
+    margin-top: 5px;
+  }  
+  img {
+  	width:80px;
   }
 }
 
 // Body (where all modal content resides)
 .modal-body {
+  font-family: @sansFontFamily;
   overflow-y: auto;
-  max-height: 400px;
-  padding: 15px;
+  max-height: 500px;
+  padding: 0 30px 30px;
+  color:#333;
+	font-size:@baseFontSize;
+	line-height: 21px;
 }
+
 // Remove bottom margin if need be
 .modal-form {
   margin-bottom: 0;

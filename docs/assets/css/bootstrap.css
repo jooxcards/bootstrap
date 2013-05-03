@@ -6107,7 +6107,7 @@ button.dropdown-toggle i {
   bottom: 0;
   left: 0;
   z-index: 1040;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .modal-backdrop.fade {
@@ -6125,9 +6125,10 @@ button.dropdown-toggle i {
   top: 50%;
   left: 50%;
   z-index: 1050;
-  width: 560px;
+  width: 630px;
   margin: -250px 0 0 -280px;
-  overflow: auto;
+  overflow: visible;
+  font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
   border: 1px solid #999;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -6135,9 +6136,9 @@ button.dropdown-toggle i {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
-  -webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-     -moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding-box;
           background-clip: padding-box;
@@ -6155,24 +6156,64 @@ button.dropdown-toggle i {
   top: 50%;
 }
 
-.modal-header {
-  padding: 9px 15px;
-  border-bottom: 1px solid #eee;
+.modal .close {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-right: -16px;
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #666666;
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in-out;
+     -moz-transition: opacity 0.4s ease-in-out;
+       -o-transition: opacity 0.4s ease-in-out;
+          transition: opacity 0.4s ease-in-out;
 }
 
-.modal-header .close {
-  margin-top: 2px;
+.modal .close :hover {
+  opacity: 0.9;
+}
+
+.modal-header {
+  padding: 30px;
+  color: #666666;
+}
+
+.modal-header .modal-title {
+  width: 80%;
+  margin-left: 30px;
 }
 
 .modal-header h3 {
   margin: 0;
+  font-size: 30px;
   line-height: 30px;
 }
 
+.modal-header p {
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.modal-header img {
+  width: 80px;
+}
+
 .modal-body {
-  max-height: 400px;
-  padding: 15px;
+  max-height: 500px;
+  padding: 0 30px 30px;
   overflow-y: auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333;
 }
 
 .modal-form {

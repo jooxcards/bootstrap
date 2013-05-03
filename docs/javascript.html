@@ -156,7 +156,8 @@ $('#myModal').on('show', function (e) {
         ================================================== -->
         <section id="transitions">
           <div class="page-header">
-            <h2>Transitions <small>bootstrap-transition.js</small></h2>
+            <h2>Transitions</h2>
+            <p class="byline">bootstrap-transition.js</p> 
           </div>
           <h3>About transitions</h3>
           <p>For simple transition effects, include bootstrap-transition.js once alongside the other JS files. If you're using the compiled (or minified) bootstrap.js, there is no need to include this&mdash;it's already there.</p>
@@ -177,7 +178,7 @@ $('#myModal').on('show', function (e) {
         ================================================== -->
         <section id="modals">
           <div class="page-header">
-            <h1>Modals</h1>
+            <h2>Modals</h2>
             <p class="byline">bootstrap-modal.js</p> 
           </div>
 
@@ -188,34 +189,46 @@ $('#myModal').on('show', function (e) {
           <h3>Static example</h3>
           <p>A rendered modal with header, body, and set of actions in the footer.</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
+           
             <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>Modal header</h3>
+              <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+              <div class="modal-header clearfix">
+                <i class="icon-question-sign pull-left"></i>
+          			<div class="pull-left modal-title">
+          				<h3 id="myModalLabel">A wonderful serenity has taken?</h3>
+          				<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+          			</div>
               </div>
-              <div class="modal-body">
-                <p>One fine body…</p>
-              </div>
+          		<div class="modal-body">
+          			<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p> 
+          		</div>
               <div class="modal-footer">
                 <a href="#" class="btn">Close</a>
-                <a href="#" class="btn btn-primary">Save changes</a>
+                <a href="#" class="btn btn-green">Save changes</a>
               </div>
             </div>
+            
           </div>
+                  
+          
 <pre class="prettyprint linenums">
-&lt;div class="modal hide fade"&gt;
-  &lt;div class="modal-header"&gt;
-    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
-    &lt;h3&gt;Modal header&lt;/h3&gt;
+  &lt;div class="modal hide fade"&gt;
+    &lt;a type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/a&gt;
+    &lt;div class="modal-header clearfix"&gt;
+      &lt;img src="http://i.imgur.com/vwlVU47.png" class="pull-left"&gt;
+			&lt;div class="pull-left modal-title"&gt;
+				&lt;h3 id="myModalLabel"&gt;A wonderful serenity has taken?&lt;/h3&gt;
+				&lt;p&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.&lt;/p&gt;
+			&lt;/div&gt;
+    &lt;/div&gt;
+		&lt;div class="modal-body"&gt;
+			&lt;p&gt;One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.&lt;/p&gt; 
+		&lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
+      &lt;a href="#" class="btn btn-green"&gt;Save changes&lt;/a&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class="modal-body"&gt;
-    &lt;p&gt;One fine body…&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-footer"&gt;
-    &lt;a href="#" class="btn"&gt;Close&lt;/a&gt;
-    &lt;a href="#" class="btn btn-primary"&gt;Save changes&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 </pre>
 
           <h3>Live demo</h3>

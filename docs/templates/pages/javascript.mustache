@@ -79,7 +79,8 @@ $('#myModal').on('show', function (e) {
         ================================================== -->
         <section id="transitions">
           <div class="page-header">
-            <h2>{{_i}}Transitions{{/i}} <small>bootstrap-transition.js</small></h2>
+            <h2>{{_i}}Transitions{{/i}}</h2>
+            <p class="byline">bootstrap-transition.js</p> 
           </div>
           <h3>{{_i}}About transitions{{/i}}</h3>
           <p>{{_i}}For simple transition effects, include bootstrap-transition.js once alongside the other JS files. If you're using the compiled (or minified) bootstrap.js, there is no need to include this&mdash;it's already there.{{/i}}</p>
@@ -101,7 +102,7 @@ $('#myModal').on('show', function (e) {
         ================================================== -->
         <section id="modals">
           <div class="page-header">
-            <h1>{{_i}}Modals{{/i}}</h1>
+            <h2>{{_i}}Modals{{/i}}</h2>
             <p class="byline">bootstrap-modal.js</p> 
           </div>
 
@@ -112,34 +113,47 @@ $('#myModal').on('show', function (e) {
           <h3>{{_i}}Static example{{/i}}</h3>
           <p>{{_i}}A rendered modal with header, body, and set of actions in the footer.{{/i}}</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
+           
             <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h3>{{_i}}Modal header{{/i}}</h3>
+              <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+              <div class="modal-header clearfix">
+                <i class="icon-question-sign pull-left"></i>
+          			<div class="pull-left modal-title">
+          				<h3 id="myModalLabel">A wonderful serenity has taken?</h3>
+          				<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+          			</div>
               </div>
-              <div class="modal-body">
-                <p>{{_i}}One fine body…{{/i}}</p>
-              </div>
+          		<div class="modal-body">
+          			<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.</p> 
+          		</div>
               <div class="modal-footer">
                 <a href="#" class="btn">{{_i}}Close{{/i}}</a>
-                <a href="#" class="btn btn-primary">{{_i}}Save changes{{/i}}</a>
+                <a href="#" class="btn btn-green">{{_i}}Save changes{{/i}}</a>
               </div>
             </div>
-          </div>{{! /example }}
+            
+          </div>
+                  
+          
+          {{! /example }}
 <pre class="prettyprint linenums">
-&lt;div class="modal hide fade"&gt;
-  &lt;div class="modal-header"&gt;
-    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
-    &lt;h3&gt;{{_i}}Modal header{{/i}}&lt;/h3&gt;
+  &lt;div class="modal hide fade"&gt;
+    &lt;a type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/a&gt;
+    &lt;div class="modal-header clearfix"&gt;
+      &lt;img src="http://i.imgur.com/vwlVU47.png" class="pull-left"&gt;
+			&lt;div class="pull-left modal-title"&gt;
+				&lt;h3 id="myModalLabel"&gt;A wonderful serenity has taken?&lt;/h3&gt;
+				&lt;p&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.&lt;/p&gt;
+			&lt;/div&gt;
+    &lt;/div&gt;
+		&lt;div class="modal-body"&gt;
+			&lt;p&gt;One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.&lt;/p&gt; 
+		&lt;/div&gt;
+    &lt;div class="modal-footer"&gt;
+      &lt;a href="#" class="btn"&gt;{{_i}}Close{{/i}}&lt;/a&gt;
+      &lt;a href="#" class="btn btn-green"&gt;{{_i}}Save changes{{/i}}&lt;/a&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class="modal-body"&gt;
-    &lt;p&gt;{{_i}}One fine body…{{/i}}&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class="modal-footer"&gt;
-    &lt;a href="#" class="btn"&gt;{{_i}}Close{{/i}}&lt;/a&gt;
-    &lt;a href="#" class="btn btn-primary"&gt;{{_i}}Save changes{{/i}}&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 </pre>
 
           <h3>{{_i}}Live demo{{/i}}</h3>
