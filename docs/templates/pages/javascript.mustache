@@ -133,40 +133,45 @@ $('#myModal').on('show', function (e) {
             </div>
             
           </div>
-                  
-          
+
           {{! /example }}
 <pre class="prettyprint linenums">
-  &lt;div class="modal hide fade"&gt;
-    &lt;a type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/a&gt;
+&lt;div class="modal hide fade"&gt;
+  &lt;a type="button" class="close" data-dismiss="modal" aria-hidden="true"&gt;&amp;times;&lt;/a&gt;
     &lt;div class="modal-header clearfix"&gt;
-      &lt;img src="http://i.imgur.com/vwlVU47.png" class="pull-left"&gt;
-			&lt;div class="pull-left modal-title"&gt;
-				&lt;h3 id="myModalLabel"&gt;A wonderful serenity has taken?&lt;/h3&gt;
-				&lt;p&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.&lt;/p&gt;
-			&lt;/div&gt;
+      &lt;i class="icon-question-sign pull-left"&gt;&lt;/i&gt;
+      &lt;div class="pull-left modal-title"&gt;
+        &lt;h3 id="myModalLabel"&gt;A wonderful serenity has taken?&lt;/h3&gt;
+          &lt;p&gt;A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.&lt;/p&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
-		&lt;div class="modal-body"&gt;
-			&lt;p&gt;One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.&lt;/p&gt; 
-		&lt;/div&gt;
-    &lt;div class="modal-footer"&gt;
-      &lt;a href="#" class="btn"&gt;{{_i}}Close{{/i}}&lt;/a&gt;
-      &lt;a href="#" class="btn btn-green"&gt;{{_i}}Save changes{{/i}}&lt;/a&gt;
-    &lt;/div&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;p&gt;One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment.&lt;/p&gt; 
   &lt;/div&gt;
+  &lt;div class="modal-footer"&gt;
+    &lt;a href="#" class="btn"&gt;{{_i}}Close{{/i}}&lt;/a&gt;
+    &lt;a href="#" class="btn btn-green"&gt;{{_i}}Save changes{{/i}}&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
           <h3>{{_i}}Live demo{{/i}}</h3>
           <p>{{_i}}Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.{{/i}}</p>
           <!-- sample modal content -->
           <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h3 id="myModalLabel">{{_i}}Modal Heading{{/i}}</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-header clearfix">
+              <i class="icon-circle pull-left"></i>
+        			<div class="pull-left modal-title">
+        				<h3 id="myModalLabel">A wonderful serenity has taken?</h3>
+        				<p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+        			</div>
             </div>
             <div class="modal-body">
               <h4>{{_i}}Text in a modal{{/i}}</h4>
-              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum accusamus quo quidem rem quaerat ratione aspernatur. Vel incidunt dignissimos sequi nobis repudiandae totam at obcaecati velit tempora animi cum necessitatibus!</p>
+              
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum accusamus quo quidem rem quaerat ratione aspernatur. Vel incidunt dignissimos sequi nobis repudiandae totam at obcaecati velit tempora animi cum necessitatibus!</p>
 
               <h4>{{_i}}Popover in a modal{{/i}}</h4>
               <p>{{_i}}This <a href="#" role="button" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on hover.{{/i}}</p>
@@ -187,7 +192,7 @@ $('#myModal').on('show', function (e) {
             </div>
             <div class="modal-footer">
               <button class="btn" data-dismiss="modal">{{_i}}Close{{/i}}</button>
-              <button class="btn btn-primary">{{_i}}Save changes{{/i}}</button>
+              <button class="btn btn-green">{{_i}}Save changes{{/i}}</button>
             </div>
           </div>
           <div class="bs-docs-example" style="padding-bottom: 24px;">

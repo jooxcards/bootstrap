@@ -6126,7 +6126,7 @@ button.dropdown-toggle i {
   left: 50%;
   z-index: 1050;
   width: 630px;
-  margin: -250px 0 0 -280px;
+  margin: 0 0 0 -280px;
   overflow: visible;
   font-family: "bariol_regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: #ffffff;
@@ -6153,16 +6153,17 @@ button.dropdown-toggle i {
 }
 
 .modal.fade.in {
-  top: 50%;
+  top: 10%;
 }
 
 .modal .close {
   display: block;
   width: 32px;
   height: 32px;
+  padding-bottom: 5px;
   margin-top: -16px;
   margin-right: -16px;
-  font-size: 36px;
+  font-size: 30px;
   color: #ffffff;
   text-align: center;
   background-color: #666666;
@@ -6187,7 +6188,7 @@ button.dropdown-toggle i {
 
 .modal-header .modal-title {
   width: 80%;
-  margin-left: 30px;
+  margin: 15px 0 0 25px;
 }
 
 .modal-header h3 {
@@ -6204,6 +6205,12 @@ button.dropdown-toggle i {
 
 .modal-header img {
   width: 80px;
+}
+
+.modal-header i {
+  margin: 0 !important;
+  font-size: 100px;
+  color: #33ccff;
 }
 
 .modal-body {
