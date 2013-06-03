@@ -575,7 +575,7 @@
   })
 
 }(window.jQuery);/* ============================================================
- * bootstrap-dropdown.js v2.1.1
+ * bootstrap-dropdown.js v2.3.0
  * http://twitter.github.com/bootstrap/javascript.html#dropdowns
  * ============================================================
  * Copyright 2012 Twitter, Inc.
@@ -606,7 +606,8 @@
     , Dropdown = function (element) {
         var $el = $(element).on('click.dropdown.data-api', this.toggle)
         $('html').on('click.dropdown.data-api', function () {
-          $el.parent().removeClass('open')
+          $(toggle).next('ul').fadeToggle(280);
+          $el.parent().removeClass('opened')
         })
       }
 
@@ -623,14 +624,16 @@
 
       $parent = getParent($this)
 
-      isActive = $parent.hasClass('open')
+      isActive = $parent.hasClass('opened')
 
       clearMenus()
 
       if (!isActive) {
-        $parent.toggleClass('open')
-        $this.focus()
+        $(this).next('ul').fadeToggle(280);
+        $parent.toggleClass('opened')
       }
+
+      $this.focus()
 
       return false
     }
@@ -654,11 +657,14 @@
 
       $parent = getParent($this)
 
-      isActive = $parent.hasClass('open')
+      isActive = $parent.hasClass('opened')
 
-      if (!isActive || (isActive && e.keyCode == 27)) return $this.click()
+      if (!isActive || (isActive && e.keyCode == 27)) {
+        if (e.which == 27) $parent.find(toggle).focus()
+        return $this.click()
+      }
 
-      $items = $('[role=menu] li:not(.divider) a', $parent)
+      $items = $('[role=menu] li:not(.divider):visible a', $parent)
 
       if (!$items.length) return
 
@@ -676,8 +682,12 @@
   }
 
   function clearMenus() {
-    getParent($(toggle))
-      .removeClass('open')
+    $(toggle).each(function () {
+      if (getParent($(this)).hasClass('opened')) {
+        $(this).next('ul').fadeToggle(280);
+        getParent($(this)).removeClass('opened');
+      }
+    })
   }
 
   function getParent($this) {
@@ -689,8 +699,9 @@
       selector = selector && /#/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, '') //strip for ie7
     }
 
-    $parent = $(selector)
-    $parent.length || ($parent = $this.parent())
+    $parent = selector && $(selector)
+
+    if (!$parent || !$parent.length) $parent = $this.parent()
 
     return $parent
   }
@@ -698,6 +709,8 @@
 
   /* DROPDOWN PLUGIN DEFINITION
    * ========================== */
+
+  var old = $.fn.dropdown
 
   $.fn.dropdown = function (option) {
     return this.each(function () {
@@ -711,19 +724,26 @@
   $.fn.dropdown.Constructor = Dropdown
 
 
+ /* DROPDOWN NO CONFLICT
+  * ==================== */
+
+  $.fn.dropdown.noConflict = function () {
+    $.fn.dropdown = old
+    return this
+  }
+
+
   /* APPLY TO STANDARD DROPDOWN ELEMENTS
    * =================================== */
 
-  $(function () {
-    $('html')
-      .on('click.dropdown.data-api touchstart.dropdown.data-api', clearMenus)
-    $('body')
-      .on('click.dropdown touchstart.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
-      .on('click.dropdown.data-api touchstart.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
-      .on('keydown.dropdown.data-api touchstart.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
-  })
+  $(document)
+    .on('click.dropdown.data-api', clearMenus)
+    .on('click.dropdown.data-api', '.dropdown form', function (e) { e.stopPropagation() })
+    .on('.dropdown-menu', function (e) { e.stopPropagation() })
+    .on('click.dropdown.data-api'  , toggle, Dropdown.prototype.toggle)
+    .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
 
-}(window.jQuery);/* =========================================================
+}(window.jQuery); /* =========================================================
  * bootstrap-modal.js v2.1.1
  * http://twitter.github.com/bootstrap/javascript.html#modals
  * =========================================================

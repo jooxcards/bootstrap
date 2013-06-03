@@ -149,8 +149,6 @@
   background-color: @linkColor;
 }
 
-
-
 // STACKED NAV
 // -----------
 
@@ -382,3 +380,52 @@
   background-color: transparent;
   cursor: default;
 }
+
+// TOP MENU
+// ---------------
+
+.nav-pages > li > a {
+  color: @grayDark;
+  font-family: @fontBariol;
+  font-size: @baseFontSize + 6;
+  border-right: 1px solid #E4E4E4;
+  .border-radius(0);
+  &:hover {
+    color: @blueLight;
+    background: none;
+  }
+}
+
+.nav-pages .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover {
+  background: none;
+  border-right: 1px solid #E4E4E4;
+  color: @blueLight;
+} 
+
+.nav-pages i {
+  color: #9d9d9d;
+  font-size: @baseFontSize - 2;
+}
+
+.nav-pages ul.dropdown-menu {
+  left: -10px;
+  margin: 15px 0 0;
+}
+
+// Menu position and menu carets
+.nav-pages ul.dropdown-menu {
+  &:after {
+    position: absolute;
+    top: -15px;
+    left: 43%;
+    text-shadow: 0px -2px 0 rgba(0, 0, 0, 0.2);
+    font-size: @baseFontSize + 3;
+    content: '▲';
+    color: @white;
+    .scaleX(1.85)
+  }
+}
+
+
+

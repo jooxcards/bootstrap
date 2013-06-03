@@ -1235,6 +1235,7 @@
     "Add dropdown menus to nearly anything with this simple plugin, including the navbar, tabs, and pills.": "Adicione menus dropdown em qualquer coisa com este plugin, incluindo barra de navegação, aba e pílulas",
     "Within a navbar": "Dentro de uma barra de navegação",
     "Within tabs": "Dentro de abas",
+    "Top Menu": "Menu do Topo",
     "Add <code>data-toggle=\"dropdown\"</code> to a link or button to toggle a dropdown.": "Adicione <code>data-toggle=\"dropdown\"</code> para um link ou botão para torná-lo um dropdown",
     "Call the dropdowns via JavaScript:": "Chame o dropdown via JavaScript",
     "Example in navbar": "Exemplo na barra de navegação",

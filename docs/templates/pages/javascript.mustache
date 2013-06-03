@@ -115,7 +115,7 @@ $('#myModal').on('show', function (e) {
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
            
             <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
-              <a type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+              <a type="button" class="close" data-dismiss="modal" aria-hidden="true" style="padding-bottom:0;padding-top: 3px;">&times;</a>
               <div class="modal-header clearfix">
                 <i class="icon-question-sign pull-left"></i>
           			<div class="pull-left modal-title">
@@ -173,22 +173,11 @@ $('#myModal').on('show', function (e) {
               
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum accusamus quo quidem rem quaerat ratione aspernatur. Vel incidunt dignissimos sequi nobis repudiandae totam at obcaecati velit tempora animi cum necessitatibus!</p>
 
-              <h4>{{_i}}Popover in a modal{{/i}}</h4>
-              <p>{{_i}}This <a href="#" role="button" class="btn popover-test" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">button</a> should trigger a popover on hover.{{/i}}</p>
-
-              <h4>{{_i}}Tooltips in a modal{{/i}}</h4>
-              <p>{{_i}}<a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> should have tooltips on hover.{{/i}}</p>
-
-              <hr>
-
               <h4>{{_i}}Overflowing text to show optional scrollbar{{/i}}</h4>
-              <p>{{_i}}We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.{{/i}}</p>
-              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
-              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium accusantium consequatur sint libero necessitatibus itaque architecto quaerat dolor amet deserunt id expedita unde nihil esse ea beatae accusamus perspiciatis.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium accusantium consequatur sint libero necessitatibus itaque architecto quaerat dolor amet deserunt id expedita unde nihil esse ea beatae accusamus perspiciatis.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium accusantium consequatur sint libero necessitatibus itaque architecto quaerat dolor amet deserunt id expedita unde nihil esse ea beatae accusamus perspiciatis.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam praesentium accusantium consequatur sint libero necessitatibus itaque architecto quaerat dolor amet deserunt id expedita unde nihil esse ea beatae accusamus perspiciatis.</p>
             </div>
             <div class="modal-footer">
               <button class="btn" data-dismiss="modal">{{_i}}Close{{/i}}</button>
@@ -330,7 +319,8 @@ $('#myModal').on('hidden', function () {
         ================================================== -->
         <section id="dropdowns">
           <div class="page-header">
-            <h1>{{_i}}Dropdowns{{/i}} <small>bootstrap-dropdown.js</small></h1>
+            <h2>{{_i}}Dropdowns{{/i}}</h2>
+            <p class="byline">bootstrap-dropdown.js</p>
           </div>
 
 
@@ -420,6 +410,45 @@ $('#myModal').on('hidden', function () {
           </div> {{! /example }}
 
 
+          <h3>{{_i}}Top Menu{{/i}}</h3>
+          <div class="bs-docs-example">
+            <ul class="nav nav-pills nav-pages">
+              <li><a href="#">{{_i}}Regular link{{/i}}</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">{{_i}}Dropdown{{/i}} <i class="icon-chevron-down"></i></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li><a tabindex="-1" href="#">{{_i}}Action{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Another action{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Something else here{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Separated link{{/i}}</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">{{_i}}Dropdown 2{{/i}} <i class="icon-chevron-down"></i></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">{{_i}}Action{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Another action{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Something else here{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Separated link{{/i}}</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">{{_i}}Dropdown 3{{/i}} <i class="icon-chevron-down"></i></a>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li><a tabindex="-1" href="#">{{_i}}Action{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Another action{{/i}}</a></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Something else here{{/i}}</a></li>
+                  <li class="divider"></li>
+                  <li><a tabindex="-1" href="#">{{_i}}Separated link{{/i}}</a></li>
+                </ul>
+              </li>
+            </ul> <!-- /tabs -->
+          </div> {{! /example }}
+
+
+
           <hr class="bs-docs-separator">
 
 
@@ -466,11 +495,12 @@ $('#myModal').on('hidden', function () {
         ================================================== -->
         <section id="scrollspy">
           <div class="page-header">
-            <h1>{{_i}}ScrollSpy{{/i}} <small>bootstrap-scrollspy.js</small></h1>
+            <h2>{{_i}}ScrollSpy{{/i}}</h2>
+             <p class="byline">bootstrap-scrollspy.js</p>
           </div>
 
 
-          <h2>{{_i}}Example in navbar{{/i}}</h2>
+          <h3>{{_i}}Example in navbar{{/i}}</h3>
           <p>{{_i}}The ScrollSpy plugin is for automatically updating nav targets based on scroll position. Scroll the area below the navbar and watch the active class change. The dropdown sub items will be highlighted as well.{{/i}}</p>
           <div class="bs-docs-example">
             <div id="navbarExample" class="navbar navbar-static">
@@ -581,7 +611,8 @@ $('[data-spy="scroll"]').each(function () {
         ================================================== -->
         <section id="tabs">
           <div class="page-header">
-            <h1>{{_i}}Togglable tabs{{/i}} <small>bootstrap-tab.js</small></h1>
+            <h2>{{_i}}Togglable tabs{{/i}}</h2>
+            <p class="byline">bootstrap-tab.js</p>
           </div>
 
 
@@ -619,7 +650,7 @@ $('[data-spy="scroll"]').each(function () {
           <hr class="bs-docs-separator">
 
 
-          <h2>{{_i}}Usage{{/i}}</h2>
+          <h3>{{_i}}Usage{{/i}}</h3>
           <p>{{_i}}Enable tabbable tabs via JavaScript (each tab needs to be activated individually):{{/i}}</p>
 <pre class="prettyprint linenums">
 $('#myTab a').click(function (e) {
@@ -703,11 +734,12 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         ================================================== -->
         <section id="tooltips">
           <div class="page-header">
-            <h1>{{_i}}Tooltips{{/i}} <small>bootstrap-tooltip.js</small></h1>
+            <h2>{{_i}}Tooltips{{/i}}</h2>
+            <p class="byline">bootstrap-tooltip.js</p>
           </div>
 
 
-          <h2>{{_i}}Examples{{/i}}</h2>
+          <h3>{{_i}}Examples{{/i}}</h3>
           <p>{{_i}}Inspired by the excellent jQuery.tipsy plugin written by Jason Frame; Tooltips are an updated version, which don't rely on images, use CSS3 for animations, and data-attributes for local title storage.{{/i}}</p>
           <p>{{_i}}Hover over the links below to see tooltips:{{/i}}</p>
           <div class="bs-docs-example tooltip-demo">
@@ -825,7 +857,8 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
       ================================================== -->
       <section id="popovers">
         <div class="page-header">
-          <h1>{{_i}}Popovers{{/i}} <small>bootstrap-popover.js</small></h1>
+          <h2>{{_i}}Popovers{{/i}}</h2>
+          <p class="byline">bootstrap-popover.js</p>
         </div>
 
         <h2>{{_i}}Examples{{/i}}</h2>
@@ -980,7 +1013,8 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
       ================================================== -->
       <section id="alerts">
         <div class="page-header">
-          <h1>{{_i}}Alert messages{{/i}} <small>bootstrap-alert.js</small></h1>
+          <h2>{{_i}}Alert messages{{/i}}</h2>
+          <p class="byline">bootstrap-alert.js</p>
         </div>
 
 
@@ -988,14 +1022,14 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
         <p>{{_i}}Add dismiss functionality to all alert messages with this plugin.{{/i}}</p>
         <div class="bs-docs-example">
           <div class="alert fade in">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
             <strong>{{_i}}Holy guacamole!{{/i}}</strong> {{_i}}Best check yo self, you're not looking too good.{{/i}}
           </div>
         </div>{{! /example }}
 
         <div class="bs-docs-example">
           <div class="alert alert-block alert-error fade in">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <button type="button" class="close" data-dismiss="alert"><i class="icon-remove"></i></button>
             <h4 class="alert-heading">{{_i}}Oh snap! You got an error!{{/i}}</h4>
             <p>{{_i}}Change this and that and try again. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum.{{/i}}</p>
             <p>
@@ -1014,7 +1048,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
         <h3>{{_i}}Markup{{/i}}</h3>
         <p>{{_i}}Just add <code>data-dismiss="alert"</code> to your close button to automatically give an alert close functionality.{{/i}}</p>
-        <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&amp;times;&lt;/a&gt;</pre>
+        <pre class="prettyprint linenums">&lt;a class="close" data-dismiss="alert" href="#"&gt;&lt;i class="icon-remove"&gt;&lt;/i&gt;&lt;/a&gt;</pre>
 
         <h3>{{_i}}Methods{{/i}}</h3>
         <h4>$().alert()</h4>
@@ -1057,7 +1091,8 @@ $('#my-alert').bind('closed', function () {
           ================================================== -->
           <section id="buttons">
             <div class="page-header">
-              <h1>{{_i}}Buttons{{/i}} <small>bootstrap-button.js</small></h1>
+              <h2>{{_i}}Buttons{{/i}}</h2>
+              <p class="byline">bootstrap-button.js</p>
             </div>
 
             <h2>{{_i}}Example uses{{/i}}</h2>
@@ -1317,7 +1352,8 @@ $('#myCollapsible').on('hidden', function () {
           ================================================== -->
           <section id="carousel">
             <div class="page-header">
-              <h1>{{_i}}Carousel{{/i}} <small>bootstrap-carousel.js</small></h1>
+              <h2>{{_i}}Carousel{{/i}}</h2>
+              <p class="byline">bootstrap-carousel.js</p>
             </div>
 
             <h2>{{_i}}Example carousel{{/i}}</h2>
@@ -1457,11 +1493,12 @@ $('.carousel').carousel({
           ================================================== -->
           <section id="typeahead">
             <div class="page-header">
-              <h1>{{_i}}Typeahead{{/i}} <small>bootstrap-typeahead.js</small></h1>
+              <h2>{{_i}}Typeahead{{/i}}</h2>
+              <p class="byline">bootstrap-typeahead.js</p>
             </div>
 
 
-            <h2>{{_i}}Example{{/i}}</h2>
+            <h3>{{_i}}Example{{/i}}</h3>
             <p>{{_i}}A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.{{/i}}</p>
             <div class="bs-docs-example" style="background-color: #f5f5f5;">
               <input type="text" class="span3" style="margin: 0 auto;" data-provide="typeahead" data-items="4" data-source='["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Dakota","North Carolina","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"]'>
@@ -1543,10 +1580,11 @@ $('.carousel').carousel({
           ================================================== -->
           <section id="affix">
             <div class="page-header">
-              <h1>{{_i}}Affix{{/i}} <small>bootstrap-affix.js</small></h1>
+              <h2>{{_i}}Affix{{/i}}</h2>
+             <p class="byline">bootstrap-affix.js</p>
             </div>
 
-            <h2>{{_i}}Example{{/i}}</h2>
+            <h3>{{_i}}Example{{/i}}</h3>
             <p>{{_i}}The subnavigation on the left is a live demo of the affix plugin.{{/i}}</p>
 
             <hr class="bs-docs-separator">
